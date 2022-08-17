@@ -1,0 +1,188 @@
+/* @import '../color/colors';
+@theme: default;
+@ant-prefix: ant;
+@html-selector: html;
+@primary-color: @blue-6;
+
+.botao{
+  @btn-primary-bg: @primary-color;  
+} */
+
+@import '~antd/dist/antd.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(155, 200, 255);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(55, 100, 155);
+    border-radius: 10px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.header{
+    width: 100vw;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* background-color: rgb(155, 100, 255); */
+    background-image: linear-gradient(#1fe7f1,#228cca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .img{
+    width: 70px;
+}
+
+.navList{
+    list-style: none;
+    display: flex;
+}
+
+.navList li{
+    margin-left: 32px;
+}
+
+.navList li button{
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+.navList li button:hover{
+    text-decoration: underline;
+}
+
+main{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 88vh;
+    text-align: center;
+    background-color: rgba(55, 100, 255);
+    top: 12vh;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+h1{
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+h1::selection{
+    color: black;
+    background-color: white;
+}
+
+.imagem{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 200px auto; 
+    animation: flutuante 2s linear infinite;
+
+}
+
+@keyframes flutuante{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-80px);
+    }
+}
+
+form{
+    width: 70vw;
+    height: 100%;
+    position: relative;
+}
+
+.input{
+    outline: none;
+    width: 400px;
+    height: 70px;
+    font-size: 40px;
+    margin-top: 200px;
+    text-align: center;
+    border: none;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background-color: teal;
+    overflow-y: scroll;
+}
+
+
+.salvar{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.borda{
+    border: 2px solid white;
+    position: relative;
+    height: 30px;
+}
+
+.p{
+    color: white;
+}
+
+.center{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 100vw;
+}

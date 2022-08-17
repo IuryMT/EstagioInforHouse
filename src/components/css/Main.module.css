@@ -1,0 +1,90 @@
+main{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 88vh;
+    text-align: center;
+    background-color: rgba(55, 100, 255);
+    top: 12vh;
+    position: relative;
+    margin-bottom: 84px;
+}
+
+h1{
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+h1::selection{
+    color: black;
+    background-color: white;
+}
+/* 
+.imagem{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 200px auto; 
+    animation: flutuante 2s linear infinite;
+
+}
+
+@keyframes flutuante{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-80px);
+    }
+} */
+
+form{
+    width: 70vw;
+    height: 100%;
+    position: relative;
+}
+
+.input{
+    outline: none;
+    width: 400px;
+    height: 70px;
+    font-size: 40px;
+    margin-top: 200px;
+    text-align: center;
+    border: none;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background-color: teal;
+    overflow-y: scroll;
+}
+
+
+.salvar{
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.borda{
+    border: 2px solid white;
+    position: relative;
+    height: 30px;
+}
+
+.p{
+    color: white;
+}
+
