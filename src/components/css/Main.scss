@@ -1,59 +1,37 @@
 main{
     overflow-x: hidden;
     width: 100vw;
-    height: 88vh;
+    height: 100vh;
     text-align: center;
-    background-color: rgba(55, 100, 255);
-    top: 12vh;
     position: relative;
-    margin-bottom: 84px;
 }
 
-h1{
+h1.title{
     color: white;
-    position: relative;
     text-align: center;
 }
 
-h1::selection{
+h1.title::selection{
     color: black;
     background-color: white;
 }
-/* 
-.imagem{
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 200px auto; 
-    animation: flutuante 2s linear infinite;
 
-}
-
-@keyframes flutuante{
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-80px);
-    }
-} */
-
-form{
+.form{
     width: 70vw;
-    height: 100%;
+    height: 100vh;
     position: relative;
+    left: 0;
+    background-color: rgba(73, 9, 225);
 }
 
-.input{
+#codigo{
+    margin-top: 200px;
     outline: none;
     width: 400px;
     height: 70px;
     font-size: 40px;
-    margin-top: 200px;
     text-align: center;
-    border: none;
+    border: 0;
 }
 
 .direita{
@@ -62,21 +40,21 @@ form{
     position: absolute;
     right: 0;
     top: 0;
-    width: 30%;
-    height: 100%;
+    width: 30vw;
+    height: 100vh;
     background-color: teal;
     overflow-y: scroll;
 }
 
 
-.salvar{
+/* .salvar{
     display: block;
     margin: 0 auto;
     margin-top: 50px;
     padding: 10px;
     border: none;
     cursor: pointer;
-}
+} */
 
 .borda{
     border: 2px solid white;

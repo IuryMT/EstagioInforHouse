@@ -1,89 +1,41 @@
-import styles from "./css/Header.module.css"
+import "./css/Header.scss"
 import logo192 from "../img/logo192.png"
-import 'antd/dist/antd.css';
 import React from 'react';
+import { Route, Routes, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Login } from "./Login";
+// import { Link } from 'react-router-dom'
+
 
 export function Header(){
 
-// const [codigo, setCodigo] = useState();
-// const [codigos, setCodigos] = useState([]);
-// const [count, setCount] = useState(0);
-
-// function salva(param){
-//     setCodigo(param.target.value); //puxa os valores do input para o array 
-// }
-
-
-// function salva2(param){
-//     param.preventDefault();
-
-//     let temp_codigos = codigos
-//     temp_codigos.push(codigo)
-
-//     setCodigos(temp_codigos)
-//     console.log(codigos);
-
-//     document.getElementById("form").reset();
-
-//     if (count <100){
-//         setCount ((c) => c + 1);
-//         console.log(count);
-    
-//     }
-    
-        
-// }
-
     return(
         <>
-        <header className={styles.header}>
-            <div className={styles.container}>
-                <nav className={styles.nav}>
-                <img className={styles.img} src={logo192} alt="not found"/>
-                    <ul className={styles.navList}>
+        <Router>
+        <header className='header'>
+            <div className='container'>
+                {/* <Router> */}
+                <nav className='nav'>
+                <img className='img' src={logo192} alt="not found"/>
+                    <ul className='navList'>
                         <li>
-                            <button>Home</button>
+                            <Link to='/login'>Login</Link>
+                            <Routes>
+                                <Route path="/login" component={<Login />} />
+                            </Routes>
                         </li>
                         <li>
-                            <button>Contato</button>
                         </li>
                         <li>
-                            <button>Sobre</button>
+                            <button>Login</button>
                         </li>
                     </ul>
                 </nav>
+
+                {/* <Route path="/login" component={Login}/> */}
+                {/* </Router> */}
             </div>
         </header>
-        {/* <main> */}
-            
-            {/* <img className={styles.imagem} src={logo192}/> */}
-            {/* <form onSubmit={salva2} id="form">
-                <h1>T-T</h1>
-                <input maxLength={13} onChange={salva} id="codigo" type="text" className={styles.input} />
-                
-            </form>
-            <div className={styles.direita}>
-                {codigos.map((codigo, index) => (
-                    <div className={styles.borda}  key = {index}>
-                        <p className={styles.p}>{codigo}</p>
-                    </div>
-                ))} */}
-                    {/* key = {codigo.toString()} */}
-            {/* </div>
-        </main> */}
-            {/* <div className={styles.center}> */}
-                {/* <Carousel type="primary" autoplay>
-                    <div>
-                        <img src={relogio} className={styles.image} alt="not found" />
-                    </div>
-                    <div>
-                        <img src={som} className={styles.image} alt="not found" />
-                    </div>
-                    <div>
-                        <img src={mulher} className={styles.image} alt="not found" />
-                    </div>
-                </Carousel> */}
-            {/* </div> */}
+        </Router>
         </>
     )
 }

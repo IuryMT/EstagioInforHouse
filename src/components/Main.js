@@ -1,11 +1,5 @@
-import styles from './css/Main.module.css'
-// import logo192 from "../img/logo192.png"
-// import relogio from "../img/relogio.png";
-// import som from "../img/som.png";
-// import mulher from "../img/mulher.png";
+import './css/Main.scss'
 import React, { useState } from 'react';
-// import { Carousel } from 'antd';
-import 'antd/dist/antd.css';
 
 export function Main(){
 
@@ -13,8 +7,10 @@ const [codigo, setCodigo] = useState();
 const [codigos, setCodigos] = useState([]);
 const [count, setCount] = useState(0);
 
+
+
 function salva(param){
-    setCodigo(param.target.value); //puxa os valores do input para o array 
+    setCodigo(param.target.value);
 }
 
 
@@ -28,10 +24,9 @@ function salva2(param){
     console.log(codigos);
 
     document.getElementById("form").reset();
-
+// Nunca apagar esse contador, senão buga o bip.
     if (count <100){
         setCount ((c) => c + 1);
-        console.log(count);
     
     }
     
@@ -41,16 +36,15 @@ function salva2(param){
         <>
         <main>
             
-            {/* <img className={styles.imagem} src={logo192}/> */}
-            <form onSubmit={salva2} id="form">
-                <h1>T-T</h1>
-                <input maxLength={13} onChange={salva} id="codigo" type="text" className={styles.input} />
+            <form onSubmit={salva2} className='form' id='form'>
+              <h1 className='title'>T-T</h1>  
+                <input maxLength={13} onChange={salva} id="codigo" type="text"/>
                 
             </form>
-            <div className={styles.direita}>
+            <div className='direita'>
                 {codigos.map((codigo, index) => (
-                    <div className={styles.borda}  key = {index}>
-                        <p className={styles.p}>{codigo}</p>
+                    <div className='borda'  key = {index}>
+                        <p className='p'>{codigo}</p>
                     </div>
                 ))}
                     {/* key = {codigo.toString()} */}
