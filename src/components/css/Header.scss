@@ -23,6 +23,7 @@
 
 body{
     overflow-x: hidden;
+    background: gray;
 }
 
 .header{
@@ -47,6 +48,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+.nav a{
+    font-size: 25px;
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav a:hover{
+text-decoration: underline;
+color: white;
 }
 
 .nav .img{

@@ -1,9 +1,8 @@
 .image{
     width: 80vw;
-    margin: auto;
-    margin-bottom: 200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
     position: relative;
-    top: 20vh;
 }
 
 .ant-carousel .slick-dots li button {
@@ -13,7 +12,7 @@
     padding: 0;
     color: transparent;
     font-size: 0;
-    background: blue !important;
+    background: gray !important;
     border: 0;
     border-radius: 1px;
     outline: none;
