@@ -1,7 +1,7 @@
 import './css/Main.scss'
 import React, { useState } from 'react';
 
-export function Main(){
+export const Main =() => {
 
 const [codigo, setCodigo] = useState();
 const [codigos, setCodigos] = useState([]);

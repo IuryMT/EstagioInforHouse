@@ -1,7 +1,9 @@
 main{
+    top: 12vh;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 88vh;
     text-align: center;
     position: relative;
 }
@@ -18,7 +20,7 @@ h1.title::selection{
 
 .form{
     width: 70vw;
-    height: 100vh;
+    height: 88vh;
     position: relative;
     left: 0;
     background-color: rgba(73, 9, 225);
@@ -41,7 +43,7 @@ h1.title::selection{
     right: 0;
     top: 0;
     width: 30vw;
-    height: 100vh;
+    height: 88vh;
     background-color: teal;
     overflow-y: scroll;
 }
