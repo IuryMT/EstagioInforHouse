@@ -1,5 +1,6 @@
 import '../../components/css/Login.scss';
 import { useState } from 'react';
+import React from 'react'
 
 export const Login = () => {
 
@@ -39,7 +40,7 @@ export const Login = () => {
                     />
                 </div>
                 <div id='actions'>
-                    <button type='submit'>Enviar</button>
+                    <button type='submit' className='enviar'>Enviar</button>
                 </div>
             </form>
         </div>
