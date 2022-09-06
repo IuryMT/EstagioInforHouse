@@ -10,14 +10,16 @@ import 'antd/dist/antd.min.css'
 import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
 
 export const Home = () => {
-    return(
+    return (
         <>
-                <Carousel autoplay>
-                        <img src={relogio} className='image' alt="not found" />
-                        <img src={som} className='image' alt="not found" />
-                        <img src={mulher} className='image' alt="not found" />
-                </Carousel>
-            <h1>Categorias em Destaque</h1>
+            {/* <div className='branco'></div> */}
+            <Carousel>
+                <img src={relogio} className='image' alt="not found" />
+                <img src={som} className='image' alt="not found" />
+                <img src={mulher} className='image' alt="not found" />
+            </Carousel>
+
+            <h1 className='h1'>Categorias em Destaque</h1>
             <div className="carousel-master">
                 <div className='card'>
                     <img src={relogio} className='imagem' alt="not found" />
@@ -28,14 +30,14 @@ export const Home = () => {
                     <h4>Capinhas</h4>
                 </div>
                 <div className='card'>
-                <img src={mulher} className='imagem' alt="not found" />
-                <h4>Fones</h4>
+                    <img src={mulher} className='imagem' alt="not found" />
+                    <h4>Fones</h4>
                 </div>
                 <div className='card'>
                     <img src={relogio} className='imagem' alt="not found" />
                     <h4>Caixinhas</h4>
                 </div>
-                    {/* <Carousel className='primary'>
+                {/* <Carousel className='primary'>
                         <div>
                             <img src={relogio} className='imagem' alt="not found" />
                         </div>
@@ -52,7 +54,7 @@ export const Home = () => {
                 {/* <LeftOutlined /> */}
                 {/* </button> */}
             </div>
-            <h1>Mais Vendidos</h1>
+            <h1 className='h1'>Mais Vendidos</h1>
             <div className="carousel-master">
                 <div className='card'>
                     <img src={relogio} className='imagem' alt="not found" />
@@ -61,33 +63,72 @@ export const Home = () => {
                     <img src={som} className='imagem' alt="not found" />
                 </div>
                 <div className='card'>
-                <img src={mulher} className='imagem' alt="not found" />
+                    <img src={mulher} className='imagem' alt="not found" />
                 </div>
                 <div className='card'>
                     <img src={relogio} className='imagem' alt="not found" />
                 </div>
             </div>
+            {/* mario */}
+            {/* 
+            <div className='branco2'></div>
+
+            <h1 className='h2'>Tendências</h1>
+            <div className="carousel-master2">
+                <div className='card2'>
+                    <img src={relogio} className='imagem2' alt="not found" />
+                    <h4>Carregadores</h4>
+                </div>
+                <div className='card2'>
+                    <img src={som} className='imagem2' alt="not found" />
+                    <h4>Capinhas</h4>
+                </div>
+                <div className='card2'>
+                    <img src={mulher} className='imagem2' alt="not found" />
+                    <h4>Fones</h4>
+                </div>
+                <div className='card2'>
+                    <img src={relogio} className='imagem2' alt="not found" />
+                    <h4>Caixinhas</h4>
+                </div>
+            </div> */}
+            z
+
+
+
             <div className='navBar'>
                 {/* <div className='contain'> */}
                 <nav className='nav-bottom'>
                     <ul className='navLista'>
                         <li>
-                            <button className='botao'><HomeOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }}/></button>
+                            <button className='botao'><HomeOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
                         </li>
                         <li>
-                        <button className='botao'><ShoppingCartOutlined style={{ fontSize: '40px', color: '#ef0505' , margin: '5px' }}/></button>
+                            <button className='botao'><ShoppingCartOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
                         </li>
                         <li>
-                        <button className='botao'><TagOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }}/></button>
+                            <button className='botao'><TagOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
                         </li>
                         <li>
-                        <button className='botao'><UserOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px'  }}/></button>
+                            <button className='botao'><UserOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
                         </li>
                     </ul>
                 </nav>
-                </div>
+            </div>
             {/* </div> */}
-            <div className='branco'>hhh</div>
-        </>
-    );
+
+            <InfiniteScroll
+                dataLength={data.length}
+                next={loadMoreData}
+                hasMore={data.length < 50}
+                loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
+                endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
+                scrollableTarget="scrollableDiv"
+            ></InfiniteScroll>
+
+
+
+
+            </>
+            );
 }

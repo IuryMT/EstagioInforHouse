@@ -1,11 +1,11 @@
-.image{
+.image {
     width: 80vw;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     position: relative;
 }
 
-.imagem{
+.imagem {
     width: 30vw;
     margin: 0 auto;
     position: relative;
@@ -13,34 +13,82 @@
     z-index: 99;
     border-radius: 30px;
 }
-
-.carousel-master{
+.carousel-master {
+    padding-top: 10px;
     width: 100%;
     height: 350px;
-    margin-top: 50px;
+    margin: 50px 0 0 0;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    background-color: gray;
+    background-color: whitesmoke;
     position: relative;
-}
 
-.carousel-master .card{
+}
+// mario
+
+// .imagem2 {
+//     width: 30vw;
+//     margin: 0 auto;
+//     position: relative;
+//     object-fit: cover;
+//     z-index: 99;
+//     border-radius: 30px;
+//     border:1px solid rgb(0, 0, 0) ;
+// }
+
+
+
+// .carousel-master2 {
+//     padding: 10px;
+//     width: 100%;
+//     height: 350px;
+//     margin: 10px 0 50px 0;
+//     display: flex;
+//     overflow-x: scroll;
+//     overflow-y: hidden;
+//     background-color: rgb(255, 255, 255);
+//     position: relative;
+// }
+
+// .carousel-master2 .card2 {
+//     margin: 0 15px;
+//     width: 100%;
+//     height: 100%;
+//     position: relative;
+// }
+
+// .carousel-master2 .card2 img {
+//     height: 100%;
+
+// }
+
+// .carousel-master2 .card2 img {
+//     height: 100%;
+// }
+// .h2 {
+//     margin: 20px 0 0 50px;
+// }
+
+
+//
+
+.carousel-master .card {
     margin: 0 15px;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.carousel-master .card img{
+.carousel-master .card img {
     height: 100%;
 }
 
-h1{
-    margin-left: 50px;
+.h1 {
+    margin: 50px 0 0 50px;
 }
 
-.carousel-master h4{
+.carousel-master h4 {
     font-size: 30px;
     text-align: center;
     z-index: 100;
@@ -50,12 +98,12 @@ h1{
     top: 50%;
     transform: translate(-50%, -50%);
     // background-color: orange;
-    background-image: linear-gradient(#ef0505,#801d27);
+    background-image: linear-gradient(#ef0505, #801d27);
     padding: 10px;
     border-radius: 50px;
 }
 
-.carousel-master .button{
+.carousel-master .button {
     width: 25px;
     height: 100%;
     font-size: 39px;
@@ -67,14 +115,14 @@ h1{
     cursor: pointer;
 }
 
-.carousel-master .button path{
+.carousel-master .button path {
     background-color: black;
 }
 
 .ant-carousel .slick-dots li button {
     display: block;
     width: 100%;
-    height: 10px !important ;
+    height: 10px !important;
     padding: 0;
     color: transparent;
     font-size: 0;
@@ -85,11 +133,12 @@ h1{
     cursor: pointer;
     opacity: 0.3;
     transition: all 0.5s;
-  }
+}
 
-  .ant-carousel{
-    margin-top: 12vh;
-  }
+.ant-carousel {
+    position: relative;
+    top: 12vh;
+}
 
 //   .navBar{
 //     width: 100vw;
@@ -104,39 +153,44 @@ h1{
 //   }
 
 // .contain{
-    // width: 100%;
+// width: 100%;
 //     // margin: auto auto;
 //     display: flex;
 //     justify-content: space-around;
 //     align-items: center;
 // }
 
-.nav-bottom{
+.nav-bottom {
     width: 100vw;
     height: 7vh;
     background-color: whitesmoke;
     position: fixed;
     bottom: 0;
     z-index: 500;
-    box-shadow: 0 0 10px rgb(0,0,0);
-//     display: flex;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    //     display: flex;
     justify-content: center;
     
 }
 
-.navLista{
+.navLista {
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
-.botao{
+.botao {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-  
-.branco{
+
+.branco {
+    margin: 200px;
+}
+
+.branco2 {
     margin: 200px;
 }
