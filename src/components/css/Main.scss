@@ -6,6 +6,10 @@ main{
     height: 88vh;
     text-align: center;
     position: relative;
+}.esc{
+    color: white;
+    text-align: center;
+    font-size: 22px;
 }
 
 h1.title{
@@ -23,17 +27,18 @@ h1.title::selection{
     height: 88vh;
     position: relative;
     left: 0;
-    background-color: rgba(73, 9, 225);
+    background-color: rgb(60, 141, 179);
 }
 
 #codigo{
-    margin-top: 200px;
+    margin-top: 20px;
     outline: none;
     width: 400px;
-    height: 70px;
-    font-size: 40px;
+    height: 50px;
+    font-size: 30px;
     text-align: center;
     border: 0;
+    border-radius: 10px;
 }
 
 .direita{
@@ -44,7 +49,8 @@ h1.title::selection{
     top: 0;
     width: 30vw;
     height: 88vh;
-    background-color: teal;
+    // background-color: teal;
+    background-image: linear-gradient(#00b193,#009675);
     overflow-y: scroll;
 }
 
@@ -66,5 +72,6 @@ h1.title::selection{
 
 .p{
     color: white;
+    font-size: 16px;
 }
 

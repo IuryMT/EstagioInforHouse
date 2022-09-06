@@ -38,10 +38,13 @@ function salva2(param){
             
             <form onSubmit={salva2} className='form' id='form'>
               <h1 className='title'>T-T</h1>  
-                <input maxLength={13} onChange={salva} id="codigo" type="text"/>
+                <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text"/>
                 
             </form>
+            
             <div className='direita'>
+                <h2 className='esc'>Código Escaneado</h2>
+                <hr></hr>
                 {codigos.map((codigo, index) => (
                     <div className='borda'  key = {index}>
                         <p className='p'>{codigo}</p>
