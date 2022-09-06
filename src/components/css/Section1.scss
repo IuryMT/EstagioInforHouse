@@ -1,12 +1,10 @@
 .image {
-    width: 80vw;
     margin: 0 auto;
-    margin-bottom: 70px;
     position: relative;
 }
 
 .imagem {
-    width: 30vw;
+    width: 26vw;
     margin: 0 auto;
     position: relative;
     object-fit: cover;
@@ -21,60 +19,42 @@
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    background-color: whitesmoke;
     position: relative;
-
 }
-// mario
 
-// .imagem2 {
-//     width: 30vw;
-//     margin: 0 auto;
-//     position: relative;
-//     object-fit: cover;
-//     z-index: 99;
-//     border-radius: 30px;
-//     border:1px solid rgb(0, 0, 0) ;
-// }
+.englobar{
+    background-color: whitesmoke;
+    margin-top: 80px;
+}
 
+.carousel-master2 {
+    padding: 10px;
+    width: 100%;
+    height: 400px;
+    margin: 30px 0 30px 0;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
 
+.carousel-master2 .card2 {
+    margin: 0 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 
-// .carousel-master2 {
-//     padding: 10px;
-//     width: 100%;
-//     height: 350px;
-//     margin: 10px 0 50px 0;
-//     display: flex;
-//     overflow-x: scroll;
-//     overflow-y: hidden;
-//     background-color: rgb(255, 255, 255);
-//     position: relative;
-// }
+.carousel-master2 .card2 img {
+    height: 60%;
+}
 
-// .carousel-master2 .card2 {
-//     margin: 0 15px;
-//     width: 100%;
-//     height: 100%;
-//     position: relative;
-// }
-
-// .carousel-master2 .card2 img {
-//     height: 100%;
-
-// }
-
-// .carousel-master2 .card2 img {
-//     height: 100%;
-// }
-// .h2 {
-//     margin: 20px 0 0 50px;
-// }
-
-
-//
+.h2 {
+    margin: 20px 0 0 50px;
+}
 
 .carousel-master .card {
-    margin: 0 15px;
+    margin: 0 10px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -97,27 +77,26 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    // background-color: orange;
     background-image: linear-gradient(#ef0505, #801d27);
     padding: 10px;
     border-radius: 50px;
 }
 
-.carousel-master .button {
-    width: 25px;
-    height: 100%;
-    font-size: 39px;
-    // background-color: rgba(0,0,0,0.7);
-    border: 0;
-    padding: 14px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-}
+// .carousel-master .button {
+//     width: 25px;
+//     height: 100%;
+//     font-size: 39px;
+//     // background-color: rgba(0,0,0,0.7);
+//     border: 0;
+//     padding: 14px;
+//     position: absolute;
+//     left: 0;
+//     cursor: pointer;
+// }
 
-.carousel-master .button path {
-    background-color: black;
-}
+// .carousel-master .button path {
+//     background-color: black;
+// }
 
 .ant-carousel .slick-dots li button {
     display: block;
@@ -140,26 +119,6 @@
     top: 12vh;
 }
 
-//   .navBar{
-//     width: 100vw;
-//     height: 8vh;
-//     background-color: whitesmoke;
-//     position: fixed;
-//     bottom: 0;
-//     z-index: 500;
-//     box-shadow: 0 0 10px rgb(0,0,0);
-//     display: flex;
-//     justify-content: center;
-//   }
-
-// .contain{
-// width: 100%;
-//     // margin: auto auto;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-// }
-
 .nav-bottom {
     width: 100vw;
     height: 7vh;
@@ -168,7 +127,6 @@
     bottom: 0;
     z-index: 500;
     box-shadow: 0 0 10px rgb(0, 0, 0);
-    //     display: flex;
     justify-content: center;
     
 }
@@ -193,4 +151,17 @@
 
 .branco2 {
     margin: 200px;
+}
+
+@media (max-width: 600px) {
+.h1{
+    font-size: 30px;
+    margin: 20px 0 0 20px;
+}
+.imagem {
+    width: 60vw;
+}
+.carousel-master h4 {
+    font-size: 20px;
+}
 }

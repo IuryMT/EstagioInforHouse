@@ -12,92 +12,92 @@ import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@
 export const Home = () => {
     return (
         <>
-            {/* <div className='branco'></div> */}
             <Carousel>
                 <img src={relogio} className='image' alt="not found" />
                 <img src={som} className='image' alt="not found" />
                 <img src={mulher} className='image' alt="not found" />
             </Carousel>
 
-            <h1 className='h1'>Categorias em Destaque</h1>
-            <div className="carousel-master">
-                <div className='card'>
-                    <img src={relogio} className='imagem' alt="not found" />
-                    <h4>Carregadores</h4>
+            <div className='englobar'>
+                <h1 className='h1'>Categorias em Destaque</h1>
+                <div className="carousel-master">
+                    <div className='card'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h4>Carregadores</h4>
+                    </div>
+                    <div className='card'>
+                        <img src={som} className='imagem' alt="not found" />
+                        <h4>Capinhas</h4>
+                    </div>
+                    <div className='card'>
+                        <img src={mulher} className='imagem' alt="not found" />
+                        <h4>Fones</h4>
+                    </div>
+                    <div className='card'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h4>Caixinhas</h4>
+                    </div>
                 </div>
-                <div className='card'>
-                    <img src={som} className='imagem' alt="not found" />
-                    <h4>Capinhas</h4>
-                </div>
-                <div className='card'>
-                    <img src={mulher} className='imagem' alt="not found" />
-                    <h4>Fones</h4>
-                </div>
-                <div className='card'>
-                    <img src={relogio} className='imagem' alt="not found" />
-                    <h4>Caixinhas</h4>
-                </div>
-                {/* <Carousel className='primary'>
-                        <div>
-                            <img src={relogio} className='imagem' alt="not found" />
-                        </div>
-                        <div>
-                            <img src={som} className='imagem' alt="not found" />
-                        </div>
-                        <div>
-                            <img src={mulher} className='imagem' alt="not found" />
-                        </div>
-
-                        
-                    </Carousel> */}
-                {/* <button className='button'> */}
-                {/* <LeftOutlined /> */}
-                {/* </button> */}
             </div>
-            <h1 className='h1'>Mais Vendidos</h1>
-            <div className="carousel-master">
-                <div className='card'>
-                    <img src={relogio} className='imagem' alt="not found" />
-                </div>
-                <div className='card'>
-                    <img src={som} className='imagem' alt="not found" />
-                </div>
-                <div className='card'>
-                    <img src={mulher} className='imagem' alt="not found" />
-                </div>
-                <div className='card'>
-                    <img src={relogio} className='imagem' alt="not found" />
+            <div className='englobar'>
+                <h1 className='h1'>Mais Vendidos</h1>
+                <div className="carousel-master2">
+                    <div className='card2'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h2>Capinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={som} className='imagem' alt="not found" />
+                        <h2>Capinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={mulher} className='imagem' alt="not found" />
+                        <h2>Capinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h2>Capinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
                 </div>
             </div>
             {/* mario */}
-            {/* 
-            <div className='branco2'></div>
 
-            <h1 className='h2'>Tendências</h1>
-            <div className="carousel-master2">
-                <div className='card2'>
-                    <img src={relogio} className='imagem2' alt="not found" />
-                    <h4>Carregadores</h4>
+            {/* <div className='branco2'></div> */}
+
+            <div className='englobar'>
+                <h1 className='h1'>Tendências</h1>
+                <div className="carousel-master2">
+
+                    <div className='card2'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h2>Carregadores</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={som} className='imagem' alt="not found" />
+                        <h2>Capinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={mulher} className='imagem' alt="not found" />
+                        <h2>Fones</h2>
+                        <h3>Descrição</h3>
+                    </div>
+                    <div className='card2'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h2>Caixinhas</h2>
+                        <h3>Descrição</h3>
+                    </div>
                 </div>
-                <div className='card2'>
-                    <img src={som} className='imagem2' alt="not found" />
-                    <h4>Capinhas</h4>
-                </div>
-                <div className='card2'>
-                    <img src={mulher} className='imagem2' alt="not found" />
-                    <h4>Fones</h4>
-                </div>
-                <div className='card2'>
-                    <img src={relogio} className='imagem2' alt="not found" />
-                    <h4>Caixinhas</h4>
-                </div>
-            </div> */}
-            z
+            </div>
 
 
 
             <div className='navBar'>
-                {/* <div className='contain'> */}
                 <nav className='nav-bottom'>
                     <ul className='navLista'>
                         <li>
@@ -115,8 +115,7 @@ export const Home = () => {
                     </ul>
                 </nav>
             </div>
-            {/* </div> */}
 
-            </>
-            );
+        </>
+    );
 }

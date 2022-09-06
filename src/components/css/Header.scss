@@ -17,18 +17,19 @@
     width: 100vw !important;
    }
 
-// ::-webkit-scrollbar{
-//     width: 10px;
-// }
+::-webkit-scrollbar{
+    width: 10px;
+}
+
 
 // ::-webkit-scrollbar-track{
 //     background: rgb(155, 200, 255);
 // }
 
-// ::-webkit-scrollbar-thumb{
-//     background: rgba(55, 100, 155);
-//     border-radius: 10px;
-// }
+::-webkit-scrollbar-thumb{
+    background: rgba(55, 100, 155);
+    border-radius: 10px;
+}
 
 body{
     overflow-x: hidden;
@@ -111,4 +112,8 @@ color: white;
     line-height: 1.2;
     // font-family: 'Bebas Neue', cursive;
     font-family: "Bebas Neue",Arial,Helvetica,sans-serif;
+}
+
+@media (max-width: 600px) {
+    
 }
