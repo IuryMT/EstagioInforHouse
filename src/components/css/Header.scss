@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* @import '~antd/dist/antd.css'; */
-
 *{
     padding: 0;
     margin: 0;
@@ -22,9 +21,9 @@
 }
 
 
-// ::-webkit-scrollbar-track{
-//     background: rgb(155, 200, 255);
-// }
+::-webkit-scrollbar-track{
+    background: transparent;
+}
 
 ::-webkit-scrollbar-thumb{
     background: rgba(55, 100, 155);
@@ -114,6 +113,41 @@ color: white;
     font-family: "Bebas Neue",Arial,Helvetica,sans-serif;
 }
 
-@media (max-width: 600px) {
-    
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    background-color: #fff;
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+}
+
+@media (max-width: 999px) {
+.navList{
+    position: absolute;
+    top: 12vh;
+    right: 0;
+    width: 50vw;
+    height: 88vh;
+    background-image: linear-gradient(#ef0505,#801d27);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+}
+
+.navList li{
+    opacity: 0;
+}
+
+.mobile-menu{
+    display: block;
+}
+}
+
+.navList.active {
+    transform: translateX(0);
 }

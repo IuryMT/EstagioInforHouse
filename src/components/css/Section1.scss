@@ -5,7 +5,7 @@
 
 .imagem {
     width: 26vw;
-    margin: 0 auto;
+    margin: 0 10px;
     position: relative;
     object-fit: cover;
     z-index: 99;
@@ -17,9 +17,10 @@
     height: 350px;
     margin: 50px 0 0 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     position: relative;
+    scroll-snap-type: x mandatory;
 }
 
 .englobar{
@@ -54,10 +55,10 @@
 }
 
 .carousel-master .card {
-    margin: 0 10px;
     width: 100%;
     height: 100%;
     position: relative;
+    scroll-snap-align: start;
 }
 
 .carousel-master .card img {
