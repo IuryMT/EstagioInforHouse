@@ -1,5 +1,6 @@
 import './css/Login.scss'
 import { useState } from 'react';
+import mer from '../../img/mer.jpg'
 // import { Redirect } from 'react-router'
 
 export function Login() {
@@ -14,6 +15,7 @@ export function Login() {
     return (
         <>
             <div className='content'>
+                {/* <img src={mer} alt= "bfuyv" className='bgf'/> */}
                 <form onSubmit={handleSubmit} className="Formulario">
                     <h1>Login</h1>
                     <div id="field">

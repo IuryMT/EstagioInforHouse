@@ -3,10 +3,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: rgb(168, 167, 167);
-    padding: 0 2rem;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-y: hidden;
+   
+
+//     background: rgb(254,254,254);
+// background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(118,123,126,1) 89%, rgba(29,32,37,1) 100%);
+
+
+    // background-color: rgb(168, 167, 167);
+//     background: rgb(1,164,154);
+// background: linear-gradient(42deg, rgba(1,164,154,1) 0%, rgba(0,0,0,1) 50%, rgba(203,0,0,1) 100%);
     // box-shadow: 5px 5px 0px rgb(0, 0, 0);
+}.bgf{
+    width: 100vw;
+    opacity: 1;
+    image-rendering: optimizeSpeed;
 }
 
 h1{
@@ -20,9 +33,10 @@ h1{
 .Formulario{
     width: 100%;
     max-width: 400px;
-    background-color: #f1f1f1;
+    background-color: #dddddd;
     padding: 5px 10px 10px;
     border-radius: 10px;
+    position: absolute;
 }
 
 #field{
@@ -44,6 +58,7 @@ label{
     padding: 7px;
     border-radius: 10px;
     font-size: 16px;
+    box-shadow: 4px 4px 7px rgb(165, 164, 164);
 }
 
 #actions{
@@ -56,7 +71,12 @@ label{
     padding: 7px;
     cursor: pointer;
     font-size: 16px;
-    border: 1px solid;
+    border: none;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px rgb(85, 85, 85);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}.enviar:hover{
+    animation-duration: 1.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    
 }
