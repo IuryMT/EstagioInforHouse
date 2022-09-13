@@ -1,63 +1,145 @@
-// import './App.css';
 // import 'antd/dist/antd.min.css'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './components/css/Header.scss';
 import { Routes, Route, Link } from 'react-router-dom';
-// import logo192 from "./img/logo192.png";
 import { Home } from './pages/Home/index.js';
 import { Login } from './pages/Login/index.js';
 import { Main } from './components/Main.js';
-// import { Evento } from './components/Evento.js';
 
-
-
-// import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
 
-  // function MobileNavbar() {
-    
-  //   Constructor(mobileMenu, navList, navLinks){  
-  //     super(mobileMenu, navList, navLinks);   
-  //     this.mobileMenu = document.querySelector(mobileMenu);
-  //     this.navList = document.querySelector(navList);
-  //     this.navLinks = document.querySelectorAll(navLinks);
-  //     this.activeClass = "active";
-  //   };
+  React.useEffect(() => {
 
-  //   function addClickEvent(){
-  //     this.mobileMenu.addEventListener("click", () => {console.log("iury aqui")});
-  //   }
+    // class MobileNavbar {
+    //   constructor(mobileMenu, navList, navLinks) {
+    //     this.mobileMenu = document.querySelector(mobileMenu);
+    //     this.navList = document.querySelector(navList);
+    //     this.navLinks = document.querySelectorAll(navLinks);
+    //     this.activeClass = "active";
 
-  //   function init() {
-  //     if(this.mobileMenu) {
-  //       this.addClickEvent();
-  //     }
-  //     return this;
-  //   }
+    //     this.handleClick = this.handleClick.bind(this);
+    //   }
 
-  // }
+    //   animateLinks() {
+    //     this.navLinks.forEach((link, index) => {
+    //       link.style.animation
+    //         ? (link.style.animation = "")
+    //         : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+    //             index / 7 + 0.3
+    //           }s`);
+    //     });
+    //   }
 
-  // const mobileNavbar = new MobileNavbar(
-  //   ".mobile-menu",
-  //   ".navList",
-  //   ".navList li",
-  // ); 
+    //   handleClick() {
+    //     this.navList.classList.toggle(this.activeClass);
+    //     this.mobileMenu.classList.toggle(this.activeClass);
+    //     this.animateLinks();
+    //   }
 
-  // mobileNavbar.init();
+    //   addClickEvent() {
+    //     this.mobileMenu.addEventListener("click", this.handleClick);
+    //   }
 
+    //   init() {
+    //     if (this.mobileMenu) {
+    //       this.addClickEvent();
+    //     }
+    //     return this;
+    //   }
+    // }
+
+    // const mobileNavbar = new MobileNavbar(
+    //   ".mobile-menu",
+    //   ".nav-list",
+    //   ".nav-list li",
+    // );
+    // mobileNavbar.init();
+
+    class MobileNavbar {
+
+      constructor(mobileMenu, navList, navLinks) {
+        // super(mobileMenu, navList, navLinks);
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+      };
+
+        animateLinks() {
+        this.navLinks.forEach((link, index) => {
+          link.style.animation
+            ? (link.style.animation = "")
+            : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+                index / 7 + 0.3
+              }s`);
+        });
+      }
+
+      handleClick() {
+        // console.log("handleClick")
+        // this.navList.classList.add(this.activeClass);
+        // console.log(classList)
+        this.navList.classList.add(this.activeClass);
+            this.mobileMenu.classList.add(this.activeClass);
+            this.animateLinks();
+      };
+
+      addClickEvent() {
+        console.log("addClickEvent")
+        this.mobileMenu.addEventListener("click", this.handleClick);
+      };
+
+      init() {
+        console.log("init")
+        if (this.mobileMenu) {
+          console.log("this true")
+          this.addClickEvent();
+        }
+        return this;
+      }
+
+    }
+
+    const mobileNavbar = new MobileNavbar(
+      ".mobile-menu",
+      ".nav-list",
+      ".nav-list li",
+    );
+
+    mobileNavbar.init();
+
+    // const [burger_class, setBurgerClass] = useState('burger-bar unclicked')
+    // const [menu_class, setMenuClass] = useState("menu hidden")
+    // const [isMenuClicked, setIsMenuClicked] = useState(false)
+
+    // const updateMenu = () => {
+    //   if (!isMenuClicked) {
+    //     setBurgerClass("burger-bar clicked")
+    //     setMenuClass("menu visible")
+    //   }
+    //   else {
+    //     setBurgerClass("burger-bar unclicked")
+    //     setMenuClass("menu hidden")
+    //   }
+    //   setIsMenuClicked(!isMenuClicked)
+    // }
+
+
+  }, []);
   return (
     <div className="App">
       <header className='header'>
         <div className='container'>
           <nav className='nav'>
-            {/* <img className='img' src={logo192} alt="not found"/> */}
             <h1 className='logo'>Infor House</h1>
             <div className='mobile-menu'>
-              <div className='line-1'></div>
-              <div className='line-2'></div>
-              <div className='line-3'></div>
+              <div className='line1'></div>
+              <div className='line2'></div>
+              <div className='line3'></div>
             </div>
-            <ul className='navList'>
+            <ul className='nav-list'>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -68,7 +150,13 @@ function App() {
                 <Link to="/vendas">Venda</Link>
               </li>
             </ul>
+            {/* <div className='burger-menu' onClick={updateMenu}>
+              <div className={burger_class}></div>
+              <div className={burger_class}></div>
+              <div className={burger_class}></div>
+            </div> */}
           </nav>
+          {/* <div className={menu_class}></div> */}
         </div>
       </header>
 

@@ -131,7 +131,7 @@ export const Home = () => {
 }} navigation={true} className="mySwiper">
     
         <SwiperSlide>
-            <div className='card'>
+            <div className='card2'>
                 <img src={relogio} className='imagem' alt="not found" />
                 <h4>Carregadores</h4>
             </div>

@@ -78,29 +78,14 @@ color: white;
     width: 70px;
 }
 
-.navList{
+.nav-list{
     list-style: none;
     display: flex;
 }
 
-.navList li{
+.nav-list li{
     margin: 0 0 0 32px;
 }
-
-// .navList li button{
-//     font-size: 25px;
-//     font-family: sans-serif;
-//     padding: 10px;
-//     background-color: transparent;
-//     border: none;
-//     color: white;
-//     cursor: pointer;
-
-// }
-
-// .navList li button:hover{
-//     text-decoration: underline;
-// }
 
 .logo{
     text-transform: uppercase;
@@ -126,7 +111,7 @@ color: white;
 }
 
 @media (max-width: 999px) {
-.navList{
+.nav-list{
     position: absolute;
     top: 12vh;
     right: 0;
@@ -137,9 +122,10 @@ color: white;
     align-items: center;
     justify-content: space-around;
     transform: translateX(100%);
+    transition: transform 0.3s ease-in;
 }
 
-.navList li{
+.nav-list li{
     opacity: 0;
 }
 
@@ -148,6 +134,86 @@ color: white;
 }
 }
 
-.navList.active {
+.nav-list.active {
     transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+
+// --------------------------------------------
+
+.burger-menu{
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-bar{
+    width: 4em;
+    height: 0.5em;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.menu{
+    width: 100;
+    height: 100vh;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+.burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2){
+    opacity: 0;
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
