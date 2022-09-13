@@ -184,7 +184,7 @@ export const Home = () => {
 
             {/* <div className='branco2'></div> */}
 
-            <div className='englobar'>
+            <div className='englobar2'>
                 <h1 className='h1'>Tendências</h1>
                 <div className="carousel-master2">
 

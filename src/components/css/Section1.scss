@@ -10,6 +10,8 @@
     object-fit: cover;
     z-index: 99;
     border-radius: 30px;
+    cursor:pointer;
+    user-select: none;
 }
 
 .carousel-master {
@@ -28,6 +30,11 @@
 .englobar {
     background-color: whitesmoke;
     margin-top: 80px;
+
+}.englobar2 {
+    background-color: whitesmoke;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .carousel-master2 {
@@ -39,6 +46,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
+    
 
 }
 
@@ -50,7 +58,11 @@
     border-radius: 30px;
     border: 1px solid #000;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}.carousel-master2 .card2:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
+
 
 .carousel-master2 .card2 img {
     height: 60%;
@@ -79,7 +91,7 @@ h3 {
 }
 
 .h1 {
-    margin: 50px 0 0 50px;
+    margin: 80px 0 0 50px;
 }
 
 .carousel-master h4,
@@ -188,6 +200,7 @@ h3 {
 }
 
 .nav-bottom {
+    
     width: 100vw;
     height: 7vh;
     background-color: whitesmoke;
