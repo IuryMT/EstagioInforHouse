@@ -9,7 +9,6 @@ import 'antd/dist/antd.min.css'
 import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
 
 
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -20,11 +19,11 @@ import "../../../node_modules/swiper/swiper.min.css";
 
 // import Swiper core and required modules
 import SwiperCore, {
-  Pagination,Navigation
+    Pagination, Navigation
 } from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([Pagination,Navigation]);
+SwiperCore.use([Pagination, Navigation]);
 
 
 export const Home = () => {
@@ -33,30 +32,30 @@ export const Home = () => {
 
     const [swiperRef, setSwiperRef] = useState(null);
 
-//   let appendNumber = 4;
-//   let prependNumber = 1;
+    //   let appendNumber = 4;
+    //   let prependNumber = 1;
 
-//   const prepend2 = () => {
-//     swiperRef.prependSlide([
-//       '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-//       '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-//     ]);
-//   }
+    //   const prepend2 = () => {
+    //     swiperRef.prependSlide([
+    //       '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+    //       '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+    //     ]);
+    //   }
 
-//   const prepend = () => {
-//     swiperRef.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-//   }
+    //   const prepend = () => {
+    //     swiperRef.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+    //   }
 
-//   const append = () => {
-//     swiperRef.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-//   }
+    //   const append = () => {
+    //     swiperRef.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+    //   }
 
-//   const append2 = () => {
-//     swiperRef.appendSlide([
-//       '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-//       '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-//     ]);
-//   }
+    //   const append2 = () => {
+    //     swiperRef.appendSlide([
+    //       '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+    //       '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+    //     ]);
+    //   }
 
 
     return (
@@ -99,31 +98,73 @@ export const Home = () => {
                 <div className="carousel-master2">
                     <div className='card2'>
                         <img src={relogio} className='imagem' alt="not found" />
-                        <h2>Capinhas</h2>
-                        <h3>Descrição</h3>
+                        <h2>*Nome do produto*</h2>
+                        <h3>*Descrição do produto*</h3>
+                        <h3 className='bold'>*300,00 R$*</h3>
                     </div>
                     <div className='card2'>
                         <img src={som} className='imagem' alt="not found" />
-                        <h2>Capinhas</h2>
-                        <h3>Descrição</h3>
+                        <h2>*Nome do produto*</h2>
+                        <h3>*Descrição do produto*</h3>
+                        <h3 className='bold'>*300,00 R$*</h3>
                     </div>
                     <div className='card2'>
                         <img src={mulher} className='imagem' alt="not found" />
-                        <h2>Capinhas</h2>
-                        <h3>Descrição</h3>
+                        <h2>*Nome do produto*</h2>
+                        <h3>*Descrição do produto*</h3>
+                        <h3 className='bold'>*300,00 R$*</h3>
                     </div>
                     <div className='card2'>
                         <img src={relogio} className='imagem' alt="not found" />
-                        <h2>Capinhas</h2>
-                        <h3>Descrição</h3>
+                        <h2>*Nome do produto*</h2>
+                        <h3>*Descrição do produto*</h3>
+                        <h3 className='bold'>*300,00 R$*</h3>
                     </div>
                 </div>
             </div>
 
+            {/* << >> */}
 
+            <div className='carousel-master2'>
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
+                    "type": "fraction"
+                }} navigation={true} className="mySwiper">
 
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                            {/* <h4 className='h4'>Carregadores</h4> */}
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
 
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
 
+<<<<<<< HEAD
 
 <div className='carousel-master2'>
     <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
@@ -134,29 +175,21 @@ export const Home = () => {
             <div className='card2'>
                 <img src={relogio} className='imagem' alt="not found" />
                 <h4>Carregadores</h4>
+=======
+                    </SwiperSlide>
+                </Swiper>
+>>>>>>> 9a826a532285ab301fde2ebff735a8d31b221c8f
             </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='card2'>
-                <img src={relogio} className='imagem' alt="not found" />
-                <h2>Capinhas</h2>
-                <h3>Descrição</h3>
-            </div>
-        </SwiperSlide>
-    <SwiperSlide><img src={som} className='imagem' alt="not found" /></SwiperSlide>
-    <SwiperSlide><img src={som} className='imagem' alt="not found" /></SwiperSlide>
-  </Swiper>
-</div>
-  {/* <p className="append-buttons"> */}
-  
+            {/* <p className="append-buttons"> */}
 
-  
-  
-  {/* <button onClick={() => prepend2()} className="prepend-2-slides">Prepend 2 Slides</button>
-  <button onClick={() => prepend()} className="prepend-slide">Prepend Slide</button>
-  <button onClick={() => append()} className="append-slide">Append Slide</button>
-  <button onClick={() => append2()} className="append-2-slides">Append 2 Slides</button> */}
-  {/* </p> */}
+
+
+
+            {/* <button onClick={() => prepend2()} className="prepend-2-slides">Prepend 2 Slides</button>
+            <button onClick={() => prepend()} className="prepend-slide">Prepend Slide</button>
+            <button onClick={() => append()} className="append-slide">Append Slide</button>
+            <button onClick={() => append2()} className="append-2-slides">Append 2 Slides</button> */}
+            {/* </p> */}
 
 
 
@@ -164,7 +197,7 @@ export const Home = () => {
 
             {/* <div className='branco2'></div> */}
 
-            <div className='englobar'>
+            <div className='englobar2'>
                 <h1 className='h1'>Tendências</h1>
                 <div className="carousel-master2">
 
