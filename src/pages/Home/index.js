@@ -5,18 +5,16 @@ import som from "../../img/som.png";
 import mulher from "../../img/mulher.png";
 import { Carousel } from 'antd';
 // import 'antd/dist/antd.css';
-import 'antd/dist/antd.min.css'
-import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
+import 'antd/dist/antd.min.css';
+import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
 
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/swiper.min.css";
-import "swiper/components/pagination/pagination.min.css"
-import "swiper/components/navigation/navigation.min.css"
-
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
 import "./styles.css";
 
 
