@@ -78,12 +78,13 @@ function App() {
       }
 
       handleClick() {
-        // console.log("handleClick")
+        console.log(this)
         // this.navList.classList.add(this.activeClass);
-        // console.log(classList)
-        this.navList.classList.add(this.activeClass);
-            this.mobileMenu.classList.add(this.activeClass);
-            this.animateLinks();
+        // 
+        mobileNavbar.navList.classList.add(this.activeClass);
+            mobileNavbar.mobileMenu.classList.add(this.activeClass);
+            mobileNavbar.animateLinks();
+            console.log(classList);
       };
 
       addClickEvent() {
@@ -92,7 +93,6 @@ function App() {
       };
 
       init() {
-        console.log("init")
         if (this.mobileMenu) {
           console.log("this true")
           this.addClickEvent();
