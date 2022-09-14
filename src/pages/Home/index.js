@@ -30,6 +30,8 @@ export const Home = () => {
 
 
 
+
+
     const [swiperRef, setSwiperRef] = useState(null);
 
     //   let appendNumber = 4;
@@ -70,8 +72,8 @@ export const Home = () => {
                 <h1 className='h1'>Categorias em Destaque</h1>
                 <div className="carousel-master">
                     {/* <button className="botao-left" id="esquerda" >
-                    <LeftOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
-                    </button> */}
+            <LeftOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
+            </button> */}
                     <div className='card'>
                         <img src={relogio} className='imagem' alt="not found" />
                         <h4>Carregadores</h4>
@@ -89,8 +91,8 @@ export const Home = () => {
                         <h4>Caixinhas</h4>
                     </div>
                     {/* <button className="botao-right" >
-                    <RightOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
-                    </button> */}
+            <RightOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
+            </button> */}
                 </div>
             </div>
             <div className='englobar'>
@@ -163,32 +165,21 @@ export const Home = () => {
                             <h3>*Descrição do produto*</h3>
                             <h3 className='bold'>*300,00 R$*</h3>
                         </div>
-
-<<<<<<< HEAD
-
-<div className='carousel-master2'>
-    <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
-  "type": "fraction"
-}} navigation={true} className="mySwiper">
-    
-        <SwiperSlide>
-            <div className='card2'>
-                <img src={relogio} className='imagem' alt="not found" />
-                <h4>Carregadores</h4>
-=======
                     </SwiperSlide>
                 </Swiper>
->>>>>>> 9a826a532285ab301fde2ebff735a8d31b221c8f
             </div>
+
+
+            
             {/* <p className="append-buttons"> */}
 
 
 
 
             {/* <button onClick={() => prepend2()} className="prepend-2-slides">Prepend 2 Slides</button>
-            <button onClick={() => prepend()} className="prepend-slide">Prepend Slide</button>
-            <button onClick={() => append()} className="append-slide">Append Slide</button>
-            <button onClick={() => append2()} className="append-2-slides">Append 2 Slides</button> */}
+        <button onClick={() => prepend()} className="prepend-slide">Prepend Slide</button>
+        <button onClick={() => append()} className="append-slide">Append Slide</button>
+        <button onClick={() => append2()} className="append-2-slides">Append 2 Slides</button> */}
             {/* </p> */}
 
 
