@@ -124,6 +124,89 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className='carousel-master2'>
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
+                    "type": "fraction"
+                }} navigation={true} className="mySwiper">
+
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                            {/* <h4 className='h4'>Carregadores</h4> */}
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className='carousel-master2'>
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
+                    "type": "fraction"
+                }} navigation={true} className="mySwiper">
+
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                            {/* <h4 className='h4'>Carregadores</h4> */}
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={relogio} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='card2'>
+                            <img src={som} className='imagem' alt="not found" />
+                            <h3>*Nome do produto*</h3>
+                            <h3>*Descrição do produto*</h3>
+                            <h3 className='bold'>*300,00 R$*</h3>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
 
             {/* << >> */}
 
