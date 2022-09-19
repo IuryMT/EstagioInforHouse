@@ -365,14 +365,17 @@ h3 {
 
 .swiper-slide.swiper-slide-active {
     width: 350px !important;
+    margin-right: 2.7vw!important;
+    margin-left: 4vw!important;
 }
 
 .swiper-slide.swiper-slide-prev {
-    width: 370px !important;
+    width: 350px !important;
+    margin-right: 0!important;
 }
 
 .swiper-slide.swiper-slide-next {
-    width: 370px !important;
+    width: 350px !important;
 }
 
 // --------------------------------------------------------------
