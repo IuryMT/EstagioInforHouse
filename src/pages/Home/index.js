@@ -28,10 +28,6 @@ SwiperCore.use([Pagination, Navigation]);
 
 export const Home = () => {
 
-
-
-
-
     const [swiperRef, setSwiperRef] = useState(null);
 
     //   let appendNumber = 4;
@@ -90,9 +86,6 @@ export const Home = () => {
                         <img src={relogio} className='imagem' alt="not found" />
                         <h4>Caixinhas</h4>
                     </div>
-                    {/* <button className="botao-right" >
-            <RightOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
-            </button> */}
                 </div>
             </div>
             <div className='englobar'>
@@ -153,10 +146,9 @@ export const Home = () => {
                             <h3>*Descrição do produto*</h3>
                             <h3 className='bold'>*300,00 R$*</h3>
                         </div>
-
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='card2'>
+                        <div className='card2 margin-right'>
                             <img src={som} className='imagem' alt="not found" />
                             <h3>*Nome do produto*</h3>
                             <h3>*Descrição do produto*</h3>
@@ -166,7 +158,7 @@ export const Home = () => {
                 </Swiper>
             </div>
 
-            <div className='carousel-master2'>
+            {/* <div className='carousel-master2'>
                 <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
                     "type": "fraction"
                 }} navigation={true} className="mySwiper">
@@ -177,7 +169,6 @@ export const Home = () => {
                             <h3>*Nome do produto*</h3>
                             <h3>*Descrição do produto*</h3>
                             <h3 className='bold'>*300,00 R$*</h3>
-                            {/* <h4 className='h4'>Carregadores</h4> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -206,7 +197,7 @@ export const Home = () => {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-            </div>
+            </div> */}
 
             {/* << >> */}
 

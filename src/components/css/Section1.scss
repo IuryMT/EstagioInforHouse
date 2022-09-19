@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .image {
     margin: 0 auto;
     position: relative;
@@ -43,13 +47,13 @@
     padding: 10px;
     width: 100%;
     height: 400px;
-    margin: 30px 0 30px 0;
+    margin: 30px 100px 30px 0;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
 
-
+scroll-snap-type: x mandatory;
 }
 
 .carousel-master2 .card2 {
@@ -61,6 +65,7 @@
     border: 1px solid #000;
     padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    scroll-snap-align: center;
 }
 
 .carousel-master2 .card2:hover {
@@ -189,7 +194,7 @@ h3 {
     padding: 0;
     color: transparent;
     font-size: 0;
-    background: gray !important;
+    background: red !important;
     border: 0;
     border-radius: 1px;
     outline: none;
@@ -206,13 +211,14 @@ h3 {
 .nav-bottom {
 
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
     background-color: whitesmoke;
     position: fixed;
     bottom: 0;
     z-index: 500;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -252,6 +258,10 @@ h3 {
     border-radius: 50px;
 }
 
+.margin-right{
+    margin-right: 30px;
+}
+
 // -----------------------------------------
 @media (max-width: 600px) {
     .imagem {
@@ -273,7 +283,7 @@ h3 {
         background: rgb(255, 255, 255);
         padding: 10px;
         width: 100%;
-        height: 400px;
+        height: 350px;
 
     }
 
@@ -282,7 +292,7 @@ h3 {
         border-radius: 30px;
         border: 1px solid #000;
         margin: 5px;
-        width: 80%;
+        width: 100%;
         height: 100%;
         position: relative;
         padding: 1px;
@@ -311,21 +321,22 @@ h3 {
         border-radius: 50px !important;
     }
 
-    // .element.style {
-    //    align-items: center!important;
-    // }
-
     .swiper-slide.swiper-slide-active {
-        align-items: center!important;
-    }
-
-    .swiper-slide.swiper-slide-prev {
+        width: 300px !important;
         margin-right: 0 !important;
-    }
-
-    .swiper-slide.swiper-slide-next {
         margin-left: 0 !important;
-
+    }
+    
+    .swiper-slide.swiper-slide-prev {
+        width: 300px !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    .swiper-slide.swiper-slide-next {
+        width: 300px !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
     }
 }
 
@@ -335,15 +346,20 @@ h3 {
     height: 100%;
 }
 
+.swiper-pagination-fraction {
+    display: none !important;
+}
+
 .swiper-slide {
     text-align: center;
+    width: 300px !important;
     font-size: 18px;
     background: #fff;
 
     /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+    display: --webkit-box;
+    display: --ms-flexbox;
+    display: --webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -365,17 +381,20 @@ h3 {
 
 .swiper-slide.swiper-slide-active {
     width: 350px !important;
-    margin-right: 2.7vw!important;
-    margin-left: 4vw!important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 .swiper-slide.swiper-slide-prev {
     width: 350px !important;
-    margin-right: 0!important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 .swiper-slide.swiper-slide-next {
     width: 350px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 // --------------------------------------------------------------
