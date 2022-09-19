@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import relogio from "../../img/relogio.png";
 import som from "../../img/som.png";
 import mulher from "../../img/mulher.png";
-import { Carousel } from 'antd';
+ import { Carousel } from 'antd';
 // import 'antd/dist/antd.css';
 import 'antd/dist/antd.min.css'
 import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
@@ -26,8 +26,10 @@ import SwiperCore, {
 SwiperCore.use([Pagination, Navigation]);
 
 
-export const Home = () => {
 
+
+
+export const Home = () => {
 
 
 
@@ -207,6 +209,8 @@ export const Home = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
+            {/* << >> */}
+
 
             {/* << >> */}
 
@@ -287,7 +291,7 @@ export const Home = () => {
             </div>
 
 
-            
+
             {/* <p className="append-buttons"> */}
 
 
@@ -356,3 +360,4 @@ export const Home = () => {
         </>
     );
 }
+
