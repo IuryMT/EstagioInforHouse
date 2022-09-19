@@ -27,16 +27,9 @@ SwiperCore.use([Pagination, Navigation]);
 
 
 
-<<<<<<< HEAD
-
-
 export const Home = () => {
 
 
-
-
-=======
->>>>>>> eee647d455a0b2107ecf7fb331a0f10d423fc991
     const [swiperRef, setSwiperRef] = useState(null);
 
     //   let appendNumber = 4;

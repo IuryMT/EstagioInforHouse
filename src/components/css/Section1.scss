@@ -1,4 +1,4 @@
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -53,7 +53,7 @@ body{
     overflow-y: hidden;
     position: relative;
 
-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
 }
 
 .carousel-master2 .card2 {
@@ -258,7 +258,7 @@ h3 {
     border-radius: 50px;
 }
 
-.margin-right{
+.margin-right {
     margin-right: 30px;
 }
 
@@ -323,20 +323,17 @@ h3 {
 
     .swiper-slide.swiper-slide-active {
         width: 300px !important;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
+        
     }
-    
+
     .swiper-slide.swiper-slide-prev {
         width: 300px !important;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-    }
     
+    }
+
     .swiper-slide.swiper-slide-next {
         width: 300px !important;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
+    
     }
 }
 
@@ -381,8 +378,8 @@ h3 {
 
 .swiper-slide.swiper-slide-active {
     width: 350px !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-right: 3vw !important;
+    margin-left: 3vw !important;
 }
 
 .swiper-slide.swiper-slide-prev {
