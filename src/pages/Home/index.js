@@ -9,12 +9,13 @@ import 'antd/dist/antd.min.css'
 import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
 
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, Autoplay } from "swiper/react";
 
 // Import Swiper styles
 import "../../../node_modules/swiper/swiper.min.css";
-// import "../../../node_modules/swiper/components/pagination/pagination.min.css";
-// import "../../../node_modules/swiper/components/navigation/navigation.min.css";
+import "../../../node_modules/swiper/modules/pagination/pagination.min.css";
+import "../../../node_modules/swiper/modules/navigation/navigation.min.css";
+import "../../../node_modules/swiper/modules/autoplay/autoplay.min.css"
 
 
 // import Swiper core and required modules
@@ -31,6 +32,24 @@ export const Home = () => {
 
 
     const [swiperRef, setSwiperRef] = useState(null);
+
+    // var swiper = new Swiper('.swiper-container', {
+    //     slidesPerView: 3,
+    //     spaceBetween: 30,
+    //     centeredSlides: true,
+    //     autoplay: {
+    //       delay: 2500,
+    //       disableOnInteraction: false,
+    //     },
+    //     pagination: {
+    //       el: '.swiper-pagination',
+    //       clickable: true,
+    //     },
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //     },
+    //   });
 
     //   let appendNumber = 4;
     //   let prependNumber = 1;
@@ -69,9 +88,6 @@ export const Home = () => {
             <div className='englobar'>
                 <h1 className='h1'>Categorias em Destaque</h1>
                 <div className="carousel-master">
-                    {/* <button className="botao-left" id="esquerda" >
-            <LeftOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} />
-            </button> */}
                     <div className='card'>
                         <img src={relogio} className='imagem' alt="not found" />
                         <h4>Carregadores</h4>
@@ -120,9 +136,11 @@ export const Home = () => {
                 </div>
             </div>
             <div className='carousel-master2'>
-                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={0} autoplay={5000} speed={400} loop={true}
+        loopFillGroupWithBlank={true}
+   pagination={{
                     "type": "fraction"
-                }} navigation={true} className="mySwiper">
+                }} navigation={true} className="mySwiper" data-swiper-autoplay="2000">
 
                     <SwiperSlide>
                         <div className='card2'>
@@ -160,54 +178,9 @@ export const Home = () => {
                 </Swiper>
             </div>
 
-            {/* <div className='carousel-master2'>
-                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
-                    "type": "fraction"
-                }} navigation={true} className="mySwiper">
-
-                    <SwiperSlide>
-                        <div className='card2'>
-                            <img src={relogio} className='imagem' alt="not found" />
-                            <h3>*Nome do produto*</h3>
-                            <h3>*Descrição do produto*</h3>
-                            <h3 className='bold'>*300,00 R$*</h3>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='card2'>
-                            <img src={relogio} className='imagem' alt="not found" />
-                            <h3>*Nome do produto*</h3>
-                            <h3>*Descrição do produto*</h3>
-                            <h3 className='bold'>*300,00 R$*</h3>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='card2'>
-                            <img src={som} className='imagem' alt="not found" />
-                            <h3>*Nome do produto*</h3>
-                            <h3>*Descrição do produto*</h3>
-                            <h3 className='bold'>*300,00 R$*</h3>
-                        </div>
-
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className='card2'>
-                            <img src={som} className='imagem' alt="not found" />
-                            <h3>*Nome do produto*</h3>
-                            <h3>*Descrição do produto*</h3>
-                            <h3 className='bold'>*300,00 R$*</h3>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-            </div>
-            {/* << >> */}
-
-
-
-            {/* << >> */}
 
             <div className='carousel-master2'>
-                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={30} pagination={{
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={0} pagination={{
                     "type": "fraction"
                 }} navigation={true} className="mySwiper">
                     <SwiperSlide>
@@ -327,6 +300,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="branco"></div>
 
 
 

@@ -27,8 +27,8 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     position: relative;
-    // scroll-snap-type: x mandatory;
-    // -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .englobar {
@@ -52,7 +52,7 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
-
+    -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
 }
 
@@ -92,7 +92,7 @@ h3 {
     position: relative;
     margin: 5px;
     border: #000;
-
+    scroll-snap-align: center;
 }
 
 .carousel-master .card img {
@@ -171,22 +171,6 @@ h3 {
     }
 }
 
-// .carousel-master .button {
-//     width: 25px;
-//     height: 100%;
-//     font-size: 39px;
-//     // background-color: rgba(0,0,0,0.7);
-//     border: 0;
-//     padding: 14px;
-//     position: absolute;
-//     left: 0;
-//     cursor: pointer;
-// }
-
-// .carousel-master .button path {
-//     background-color: black;
-// }
-
 .ant-carousel .slick-dots li button {
     display: block;
     width: 100%;
@@ -240,23 +224,19 @@ h3 {
     margin: 200px;
 }
 
-.branco2 {
-    margin: 200px;
-}
-
-.h4 {
-    font-size: 30px;
-    text-align: center;
-    z-index: 100;
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-image: linear-gradient(#ef0505, #801d27);
-    padding: 10px;
-    border-radius: 50px;
-}
+// .h4 {
+//     font-size: 30px;
+//     text-align: center;
+//     z-index: 100;
+//     color: white;
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     background-image: linear-gradient(#ef0505, #801d27);
+//     padding: 10px;
+//     border-radius: 50px;
+// }
 
 .margin-right {
     margin-right: 30px;
@@ -265,8 +245,7 @@ h3 {
 // -----------------------------------------
 @media (max-width: 600px) {
     .imagem {
-        width: 6s
-        gi0vw;
+        width: 60vw;
         margin: 2px;
     }
 
@@ -277,7 +256,7 @@ h3 {
     }
 
     .carousel-master h4 {
-        font-size: 10px;
+        font-size: 20px;
     }
 
     .carousel-master2 {
