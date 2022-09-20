@@ -6,7 +6,7 @@
     max-height: 100vh;
     max-width: 100vw;
     overflow-y: hidden;
-   
+    overflow-x: hidden;
 
 //     background: rgb(254,254,254);
 // background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(118,123,126,1) 89%, rgba(29,32,37,1) 100%);
@@ -17,6 +17,7 @@
 // background: linear-gradient(42deg, rgba(1,164,154,1) 0%, rgba(0,0,0,1) 50%, rgba(203,0,0,1) 100%);
     // box-shadow: 5px 5px 0px rgb(0, 0, 0);
 }.bgf{
+    height: 100vh;
     width: 100vw;
     opacity: 1;
     image-rendering: optimizeSpeed;
