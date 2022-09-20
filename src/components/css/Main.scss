@@ -15,6 +15,7 @@ main{
 h1.title{
     color: white;
     text-align: center;
+    margin: 0;
 }
 
 h1.title::selection{
@@ -39,7 +40,7 @@ h1.title::selection{
     text-align: center;
     border: 0;
     border-radius: 10px;
-    box-shadow: 3px 3px 7px rgb(122, 122, 122);
+    box-shadow: 3px 3px 7px rgb(100, 100, 100);
 }
 
 .direita{
@@ -75,4 +76,25 @@ h1.title::selection{
     color: white;
     font-size: 16px;
 }
+//--------------------------------------------------
+@media (max-width: 600px) {
+    .form{//cima
+        width: 100vw;
+        position: relative;
+        height: 28vh;
 
+    }.direita{//baixo
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 60vh;
+    }.p{
+        font-size: 20px;
+        
+    }#codigo{
+        padding: 10px;
+    }
+}
