@@ -1,5 +1,5 @@
 
-// export function Carrosel() {
+export function Carrosel() {
 
 //     return (
 //         <div id="root"></div>
@@ -171,4 +171,6 @@ const Carousel = () => {
     );
 };
 
-ReactDOM.render(<Carousel />, document.getElementById('root'));
+}
+
+// ReactDOM.render(<Carousel />, document.getElementById('root'));
