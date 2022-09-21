@@ -33,6 +33,12 @@ export const Home = () => {
 
     const [swiperRef, setSwiperRef] = useState(null);
 
+
+    // function scrollAuto(){
+    // document.querySelector('.carousel-master2').addEventListener("wheel", (event) => {
+    //     console.log(event)
+    // })}
+
     // var swiper = new Swiper('.swiper-container', {
     //     slidesPerView: 3,
     //     spaceBetween: 30,
@@ -135,7 +141,9 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            <h1 className='h1'>Nossos Produtos</h1>
             <div className='carousel-master2'>
+            
                 <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={0} autoplay={5000} speed={400} loop={true}
         loopFillGroupWithBlank={true}
    pagination={{
@@ -148,7 +156,6 @@ export const Home = () => {
                             <h3>*Nome do produto*</h3>
                             <h3>*Descrição do produto*</h3>
                             <h3 className='bold'>*300,00 R$*</h3>
-                            {/* <h4 className='h4'>Carregadores</h4> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -168,7 +175,7 @@ export const Home = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className='card2 margin-right'>
+                        <div className='card2'>
                             <img src={som} className='imagem' alt="not found" />
                             <h3>*Nome do produto*</h3>
                             <h3>*Descrição do produto*</h3>
@@ -178,18 +185,17 @@ export const Home = () => {
                 </Swiper>
             </div>
 
-
             <div className='carousel-master2'>
-                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={0} pagination={{
+                <Swiper onSwiper={setSwiperRef} slidesPerView={3} centeredSlides={true} spaceBetween={0} autoplay={5000} speed={400} loop={true} loopFillGroupWithBlank={true} 
+                pagination={{
                     "type": "fraction"
-                }} navigation={true} className="mySwiper">
+                }} navigation={true} className="mySwiper" data-swiper-autoplay="2000">
                     <SwiperSlide>
                         <div className='card2'>
                             <img src={relogio} className='imagem' alt="not found" />
                             <h3>*Nome do produto*</h3>
                             <h3>*Descrição do produto*</h3>
                             <h3 className='bold'>*300,00 R$*</h3>
-                            {/* <h4 className='h4'>Carregadores</h4> */}
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -300,7 +306,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="branco"></div>
+            <div className="branco">Espaço em Branco</div>
 
 
 

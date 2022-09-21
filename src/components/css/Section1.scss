@@ -323,29 +323,35 @@ h3 {
     height: 100%;
 }
 
+.swiper-wrapper{
+box-sizing: border-box !important;
+// transform: translate3d(-1000px, 0px, 0px) !important;
+}
+
 .swiper-pagination-fraction {
     display: none !important;
 }
 
 .swiper-slide {
     text-align: center;
-    width: 300px !important;
-    font-size: 18px;
-    background: #fff;
+    // width: 350px !important;
+    // font-size: 18px;
+    // background: #fff;
+    // margin: 0 10px !important;
 
     /* Center slide text vertically */
-    display: --webkit-box;
-    display: --ms-flexbox;
-    display: --webkit-flex;
-    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    // display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
-    justify-content: center;
+    // justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
-    align-items: center;
+    // align-items: center;
 }
 
 .swiper-slide img {
@@ -356,23 +362,21 @@ h3 {
     position: relative;
 }
 
-.swiper-slide.swiper-slide-active {
-    width: 350px !important;
-    margin-right: 3vw !important;
-    margin-left: 3vw !important;
-}
+// .swiper-slide.swiper-slide-active {
+//     width: 350px !important;
+// }
 
-.swiper-slide.swiper-slide-prev {
-    width: 350px !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-}
+// .swiper-slide.swiper-slide-prev {
+//     width: 350px !important;
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+// }
 
-.swiper-slide.swiper-slide-next {
-    width: 350px !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-}
+// .swiper-slide.swiper-slide-next {
+//     width: 350px !important;
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+// }
 
 // --------------------------------------------------------------
 
@@ -388,12 +392,12 @@ h3 {
 
 // -----------------------------------------------------------------
 
-.swiper-container {
-    width: 100%;
-    height: 300px;
-    margin: 20px auto;
+// .swiper-container {
+//     width: 100%;
+//     height: 350px;
+//     margin: 20px auto;
 
-}
+// }
 
 .append-buttons {
     text-align: center;
