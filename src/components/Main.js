@@ -1,6 +1,20 @@
 import './css/Main.scss'
 import React, { useState } from 'react';
 
+// forms
+
+// import { Button, Form, Input } from 'antd';
+
+// Layout do grid ja feito antd
+
+// import { Layout } from 'antd';
+// const { Header, Footer, Sider, Content } = Layout;
+
+//  para alterar para o antd // sistema grid dele
+
+// import { Col, Row } from 'antd';
+// import React from 'react';
+
 export const Main =() => {
 
 const [codigo, setCodigo] = useState();
@@ -56,3 +70,33 @@ function salva2(param){
         </>
     )
 }
+
+
+// Layout do antd  dividido certinho
+    {/* <Layout>
+    <Content>Content</Content>
+    <Sider>Sider</Sider>
+    </Layout>
+    </Layout> */}
+
+
+// para alterar para o antd // Sistema grid dele
+
+    // <Row>
+    //   <Col span={24}>col</Col>
+    // </Row>
+    // <Row>
+    //   <Col span={12}>col-12</Col>
+    //   <Col span={12}>col-12</Col>
+    // </Row>
+    // <Row>
+    //   <Col span={8}>col-8</Col>
+    //   <Col span={8}>col-8</Col>
+    //   <Col span={8}>col-8</Col>
+    // </Row>
+    // <Row>
+    //   <Col span={6}>col-6</Col>
+    //   <Col span={6}>col-6</Col>
+    //   <Col span={6}>col-6</Col>
+    //   <Col span={6}>col-6</Col>
+    // </Row>
