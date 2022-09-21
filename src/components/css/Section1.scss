@@ -193,7 +193,7 @@ h3 {
 }
 
 .nav-bottom {
-
+    margin: 0 auto;
     width: 100vw;
     height: 8vh;
     background-color: whitesmoke;
@@ -201,23 +201,27 @@ h3 {
     bottom: 0;
     z-index: 500;
     box-shadow: 0 0 10px rgb(0, 0, 0);
-    justify-content: center;
+    display: flex;
     align-items: center;
-
 }
 
 .navLista {
     list-style: none;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    margin: 0;
+}
 
+.navLista li{
+    padding: 0;
 }
 
 .botao {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin: auto;
 }
 
 .branco {

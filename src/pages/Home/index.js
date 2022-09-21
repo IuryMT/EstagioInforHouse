@@ -310,24 +310,24 @@ export const Home = () => {
 
 
 
-            <div className='navBar'>
+            {/* <div className='navBar'> */}
                 <nav className='nav-bottom'>
                     <ul className='navLista'>
                         <li>
-                            <button className='botao'><HomeOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
+                            <button className='botao'><HomeOutlined style={{ fontSize: '40px', color: '#ef0505', margin: 'auto 0' }} /></button>
                         </li>
                         <li>
-                            <button className='botao'><ShoppingCartOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
+                            <button className='botao'><ShoppingCartOutlined style={{ fontSize: '40px', color: '#ef0505', margin: 'auto 0' }} /></button>
                         </li>
                         <li>
-                            <button className='botao'><TagOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
+                            <button className='botao'><TagOutlined style={{ fontSize: '40px', color: '#ef0505', margin: 'auto 0' }} /></button>
                         </li>
                         <li>
-                            <button className='botao'><UserOutlined style={{ fontSize: '40px', color: '#ef0505', margin: '5px' }} /></button>
+                            <button className='botao'><UserOutlined style={{ fontSize: '40px', color: '#ef0505', margin: 'auto 0' }} /></button>
                         </li>
                     </ul>
                 </nav>
-            </div>
+            {/* </div> */}
 
         </>
     );
