@@ -66,10 +66,10 @@ export const Main = () => {
                                 </div>
                                 <div className='content'>
                                     <h2 className='titulo'>{codigo}</h2>
-                                    <h4 className='decricao'>Descrição</h4>
+                                    <h4 className='descricao'>Descrição</h4>
                                 </div>
                                 <div className='valor'>
-                                    <h1 className='preço'>R$ 100</h1>
+                                    <h1 className='preco'>R$ 100</h1>
                                     <h4 className='descricao'>á vista</h4>
                                 </div>
                             </div>
@@ -88,10 +88,10 @@ export const Main = () => {
                     {/* key = {codigo.toString()} */ }
                 </div>
                 <div className='esquerda'>
-                    <a className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
+                    <a href='#' className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
                 </div>
                 <div className='esquerda2'>
-                    <a className='comprar'>Comprar agora</a>
+                    <a href='#' className='comprar'>Comprar agora</a>
                 </div>
             </main>
         </>
