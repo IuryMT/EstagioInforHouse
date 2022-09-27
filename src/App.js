@@ -5,8 +5,13 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { Home } from './pages/Home/index.js';
 import { Login } from './pages/Login/index.js';
 import { Main } from './components/Main.js';
+import { Input } from 'antd';
 
 function App() {
+
+  const { Search } = Input;
+
+  const onSearch = (value) => console.log(value);
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -16,6 +21,7 @@ function App() {
         <div className='container'>
           <nav className='nav'>
             <h1 className='logo'>Infor House</h1>
+            <Search placeholder="O que você está procurando?" size="small" onSearch={onSearch} enterButton  status="error"/>
             <div className={`mobile-menu ${menuOpen === true && 'active'}` } onClick={() => setMenuOpen(!menuOpen)}>
               <div className='line1'></div>
               <div className='line2'></div>

@@ -7,13 +7,13 @@ main{
     text-align: center;
     position: relative;
 }.esc{
-    color: white;
+    color: black;
     text-align: center;
     font-size: 22px;
 }
 
 h1.title{
-    color: white;
+    color: gray;
     text-align: center;
     margin: 0;
 }
@@ -28,7 +28,9 @@ h1.title::selection{
     height: 88vh;
     position: relative;
     left: 0;
-    background-color: rgb(60, 141, 179);
+    // background-color: rgb(60, 141, 179);
+    background-color: #fff;
+    overflow-y: auto;
 }
 
 #codigo{
@@ -43,6 +45,68 @@ h1.title::selection{
     box-shadow: 3px 3px 7px rgb(100, 100, 100);
 }
 
+#quantidade{
+    margin-top: 20px;
+    outline: none;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgb(100, 100, 100);
+}
+
+.cards{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    background-color: gray;
+    padding: 4px;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.img{
+    position: relative;
+    left: 0;
+    width: 30%;
+}
+
+img{
+    position: relative;
+    border-radius: 30px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 40%;
+}
+
+h1{
+    margin: 0;
+}
+
+.valor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .direita{
     display: flex;
     flex-direction: column;
@@ -50,9 +114,10 @@ h1.title::selection{
     right: 0;
     top: 0;
     width: 30vw;
-    height: 88vh;
+    height: 60vh;
     // background-color: teal;
-    background-image: linear-gradient(#00b193,#009675);
+    // background-image: linear-gradient(#00b193,#009675);
+    background-color: gray;
     overflow-y: scroll;
 }
 
@@ -81,7 +146,7 @@ h1.title::selection{
     .form{//cima
         width: 100vw;
         position: relative;
-        height: 28vh;
+        height: 48vh;
 
     }.direita{//baixo
         display: flex;
@@ -90,7 +155,7 @@ h1.title::selection{
         left: 0;
         bottom: 0;
         width: 100vw;
-        height: 60vh;
+        height: 40vh;
     }.p{
         font-size: 20px;
         

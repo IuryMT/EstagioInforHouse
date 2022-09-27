@@ -262,3 +262,30 @@ body {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.ant-input-group-wrapper{
+    width: 600px !important;
+    display: block !important;
+}
+
+.ant-input{
+    font-size: 20px !important;
+}
+
+.ant-input-group .ant-input{
+    height: 40px !important;
+}
+
+.ant-btn-primary{
+    background-color: #ef0505 !important;
+    border-color: #801d27 !important;
+}
+
+.ant-input-search-small .ant-input-search-button{
+    height: 40px !important;
+}
+
+.ant-input-search-small .ant-input-search-button{
+    padding: 0 20px !important;
+}
+
