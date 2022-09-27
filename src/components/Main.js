@@ -1,7 +1,9 @@
 import './css/Main.scss'
 import React, { useState } from 'react';
 import relogio from "../img/relogio.png";
-import {ShoppingCartOutlined} from '@ant-design/icons'
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { Layout } from 'antd';
+const { Footer, Sider, Content } = Layout;
 
 // forms
 
@@ -52,11 +54,10 @@ export const Main = () => {
     }
     return (
         <>
-            <main>
+           {/* <main>
 
-                <form onSubmit={salva2} className='form' id='form'>
+                 <form onSubmit={salva2} className='form' id='form'>
                     <h1 className='title'>T-T</h1>
-                    {/* <input maxLength={12} type="number" placeholder={"Quantidade"} onChange={salva} id="quantidade" /> */}
                     <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
                     <div className='cards'>
                         {codigos.map((codigo, index) => (
@@ -79,21 +80,74 @@ export const Main = () => {
 
                 <div className='direita'>
                     <h2 className='esc'>Total de Compras</h2>
-                    <hr></hr>
+                    <hr></hr> */}
                     {/* {codigos.map((codigo, index) => (
                         <div className='borda' key={index}>
                             <p className='p'>{codigo}</p>
                         </div>
                     ))} */}
-                    {/* key = {codigo.toString()} */ }
-                </div>
+                {/* </div>
                 <div className='esquerda'>
                     <a href='#' className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
                 </div>
                 <div className='esquerda2'>
                     <a href='#' className='comprar'>Comprar agora</a>
-                </div>
-            </main>
+                </div> */}
+
+
+
+
+
+
+
+{/* <Layout>
+                <Header>Header</Header> */}
+                <Layout>
+                    <Content>
+                        <form onSubmit={salva2} className='form' id='form'>
+                            <h1 className='title'>T-T</h1>
+                            <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
+                            <div className='cards'>
+                                {codigos.map((codigo, index) => (
+                                    <div className='card' key={index}>
+                                        <div className='img'>
+                                            <img src={relogio} alt="not found" />
+                                        </div>
+                                        <div className='content'>
+                                            <h2 className='titulo'>{codigo}</h2>
+                                            <h4 className='descricao'>Descrição</h4>
+                                        </div>
+                                        <div className='valor'>
+                                            <h1 className='preco'>R$ 100</h1>
+                                            <h4 className='descricao'>á vista</h4>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </form>
+                    </Content>
+                    <Sider>
+                        <h2 className='esc'>Total de Compras</h2>
+                        <hr></hr>
+                        <div className="baixo">
+                        <div className='esquerda'>
+                            <a href='#' className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
+                        </div>
+                        <div className='esquerda2'>
+                            <a href='#' className='comprar'>Comprar agora</a>
+                        </div>
+                        </div>
+                    </Sider>
+                </Layout>
+                {/* <Footer>Footer</Footer> */}
+            {/* </Layout> */}
+
+
+
+
+            {/* </main> */}
+
+            
         </>
     )
 }

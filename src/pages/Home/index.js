@@ -9,7 +9,7 @@ import 'antd/dist/antd.min.css'
 import { ShoppingCartOutlined, TagOutlined, UserOutlined, HomeOutlined } from '@ant-design/icons'
 
 
-import { Swiper, SwiperSlide, Autoplay } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "../../../node_modules/swiper/swiper.min.css";

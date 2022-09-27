@@ -1,12 +1,12 @@
-main {
-    top: 12vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100vw;
-    height: 88vh;
-    text-align: center;
-    position: relative;
-}
+// main {
+//     top: 12vh;
+//     overflow-x: hidden;
+//     overflow-y: hidden;
+//     width: 100vw;
+//     height: 88vh;
+//     text-align: center;
+//     position: relative;
+// }
 
 .esc {
     margin: 5px;
@@ -94,6 +94,10 @@ img {
     object-fit: cover;
 }
 
+.ant-layout-content{
+    text-align: center;
+}
+
 .content {
     display: flex;
     align-items: flex-start;
@@ -136,14 +140,21 @@ hr {
     margin-left: 10px;
 }
 
+.baixo{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: bisque;
+    height: auto;
+}
+
 .esquerda {
     display: flex;
-    position: absolute;
-    right: 5px;
-    bottom: 70px;
-    width: 30vw;
-    // background-color: teal;
-    // background-image: linear-gradient(#00b193,#009675);
+    width: 90%;
+    margin: 5px auto;
     background-color: rgb(121, 121, 121);
     border-radius: 10px;
     align-items: center;
@@ -153,13 +164,8 @@ hr {
 
 .esquerda2 {
     display: flex;
-    position: absolute;
-    right: 5px;
-    bottom: 10px;
-    width: 30vw;
-    padding: 5px;
-    // background-color: teal;
-    // background-image: linear-gradient(#00b193,#009675);
+    width: 90%;
+    margin: 5px auto;
     background-color: rgb(104, 104, 104);
     border-radius: 10px;
     text-align: center;
@@ -171,7 +177,7 @@ hr {
     width: 100%;
     text-align: center;
     text-decoration: none;
-    margin: 5px;
+    padding: 5px;
     color: rgb(200, 245, 249);
     font-size: 22px;
 
@@ -181,15 +187,11 @@ hr {
     color: #fff;
 }
 
-
-/* .salvar{
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-} */
+.ant-layout-sider{
+    width:400px !important;
+    max-width: 400px !important;
+    min-width: 400px !important;
+}
 
 .borda {
     border: 2px solid white;

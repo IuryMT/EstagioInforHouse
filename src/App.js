@@ -6,6 +6,8 @@ import { Home } from './pages/Home/index.js';
 import { Login } from './pages/Login/index.js';
 import { Main } from './components/Main.js';
 import { Input } from 'antd';
+import { Layout } from 'antd';
+const { Header } = Layout;
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
 
   return (
     <div className="App">
+      <Layout>
+      <Header>
       <header className='header'>
         <div className='container'>
           <nav className='nav'>
@@ -47,6 +51,9 @@ function App() {
           {/* <div className={menu_class}></div> */}
         </div>
       </header>
+      </Header>
+      </Layout>
+      
 
       <Routes>
         <Route path="/" element={<Home />} />
