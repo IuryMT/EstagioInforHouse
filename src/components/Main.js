@@ -1,6 +1,7 @@
 import './css/Main.scss'
 import React, { useState } from 'react';
 import relogio from "../img/relogio.png";
+import {ShoppingCartOutlined} from '@ant-design/icons'
 
 // forms
 
@@ -85,6 +86,12 @@ export const Main = () => {
                         </div>
                     ))} */}
                     {/* key = {codigo.toString()} */ }
+                </div>
+                <div className='esquerda'>
+                    <a className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
+                </div>
+                <div className='esquerda2'>
+                    <a className='comprar'>Comprar agora</a>
                 </div>
             </main>
         </>

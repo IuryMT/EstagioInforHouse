@@ -1,4 +1,4 @@
-main{
+main {
     top: 12vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -6,24 +6,27 @@ main{
     height: 88vh;
     text-align: center;
     position: relative;
-}.esc{
-    color: black;
+}
+
+.esc {
+    margin: 5px;
+    color: rgb(252, 252, 252);
     text-align: center;
     font-size: 22px;
 }
 
-h1.title{
+h1.title {
     color: gray;
     text-align: center;
     margin: 0;
 }
 
-h1.title::selection{
+h1.title::selection {
     color: black;
     background-color: white;
 }
 
-.form{
+.form {
     width: 70vw;
     height: 88vh;
     position: relative;
@@ -33,7 +36,7 @@ h1.title::selection{
     overflow-y: auto;
 }
 
-#codigo{
+#codigo {
     margin-top: 20px;
     outline: none;
     width: 400px;
@@ -45,7 +48,7 @@ h1.title::selection{
     box-shadow: 3px 3px 7px rgb(100, 100, 100);
 }
 
-#quantidade{
+#quantidade {
     margin-top: 20px;
     outline: none;
     width: 400px;
@@ -57,68 +60,118 @@ h1.title::selection{
     box-shadow: 3px 3px 7px rgb(100, 100, 100);
 }
 
-.cards{
+.cards {
     margin-top: 100px;
+    margin-right: 10px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 10px;
 }
 
-.card{
+.card {
     width: 100%;
     height: 170px;
     display: flex;
     background-color: gray;
     padding: 4px;
-    border-radius: 25px;
-    margin: 10px;
+    border-radius: 20px;
+    margin: 2px;
 }
 
-.img{
+.img {
     position: relative;
     left: 0;
-    width: 30%;
+    width: 20%;
 }
 
-img{
+img {
     position: relative;
-    border-radius: 30px;
+    border-radius: 20px;
     max-width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.content{
+.content {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     width: 40%;
+    margin-left: 5px;
 }
 
-h1{
-    margin: 0;
+h1 {
+    margin: 0px;
+    color: #fff;
+
 }
 
-.valor{
+.valor {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.direita{
+.direita {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 5px;
+    top: 2px;
     width: 30vw;
     height: 60vh;
     // background-color: teal;
     // background-image: linear-gradient(#00b193,#009675);
     background-color: gray;
     overflow-y: scroll;
+    border-radius: 10px;
+}
+
+hr {
+    margin-left: 10px;
+}
+
+.esquerda {
+    display: flex;
+    position: absolute;
+    right: 5px;
+    bottom: 70px;
+    width: 30vw;
+    // background-color: teal;
+    // background-image: linear-gradient(#00b193,#009675);
+    background-color: #3F8F7C;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.esquerda2 {
+    display: flex;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    width: 30vw;
+    padding: 5px;
+    // background-color: teal;
+    // background-image: linear-gradient(#00b193,#009675);
+    background-color: #35769A;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.comprar {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    color: rgb(200, 245, 249);
+    font-size: 22px;
+
+}
+
+.comprar:hover {
+    color: #fff;
 }
 
 
@@ -131,24 +184,29 @@ h1{
     cursor: pointer;
 } */
 
-.borda{
+.borda {
     border: 2px solid white;
     position: relative;
     height: 30px;
 }
 
-.p{
+.p {
     color: white;
     font-size: 16px;
 }
+
 //--------------------------------------------------
 @media (max-width: 600px) {
-    .form{//cima
+    .form {
+        //cima
         width: 100vw;
         position: relative;
         height: 48vh;
 
-    }.direita{//baixo
+    }
+
+    .direita {
+        //baixo
         display: flex;
         flex-direction: column;
         position: relative;
@@ -156,10 +214,14 @@ h1{
         bottom: 0;
         width: 100vw;
         height: 40vh;
-    }.p{
+    }
+
+    .p {
         font-size: 20px;
-        
-    }#codigo{
+
+    }
+
+    #codigo {
         padding: 10px;
     }
 }
