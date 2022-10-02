@@ -1,10 +1,14 @@
-.content{
+.conteudoLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: 100vh;
-    max-width: 100vw;
+    position: absolute;
+    top: 12vh;
+    // max-height: 100vh;
+    // max-width: 100vw;
+    width: 100vw;
+    height: 88vh;
     overflow-y: hidden;
     overflow-x: hidden;
 
@@ -17,10 +21,9 @@
 // background: linear-gradient(42deg, rgba(1,164,154,1) 0%, rgba(0,0,0,1) 50%, rgba(203,0,0,1) 100%);
     // box-shadow: 5px 5px 0px rgb(0, 0, 0);
 }.bgf{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     opacity: 1;
-    image-rendering: optimizeSpeed;
 }
 
 h1{
@@ -83,7 +86,7 @@ label{
 }//------------------------aviso orientador-------
 @media (max-width: 600px) {
     .bgf{
-        height: 100vh;
+        height: 100%;
         filter: blur(2px);
         image-rendering: optimizeSpeed;
         object-fit: cover;

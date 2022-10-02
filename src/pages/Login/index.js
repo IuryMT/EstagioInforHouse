@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react'
 import mer from '../../img/mer.jpg'
 import { Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+const { Content } = Layout;
 
 export const Login = () => {
 
@@ -19,11 +19,11 @@ export const Login = () => {
             return (
                 <>
 
-                    <Layout>
-                        <Header>Header</Header>
+                    {/* <Layout>
+                        <Header>Header</Header> */}
                         <Layout>
                             <Content>
-                                <div className='content'>
+                                <div className='conteudoLogin'>
                                     <img src={mer} alt="bfuyv" className='bgf' />
                                     <form onSubmit={handleSubmit} className="Formulario">
                                         <h1>Login</h1>
@@ -57,7 +57,7 @@ export const Login = () => {
                             </Content>
 
                         </Layout>
-                    </Layout>
+                    {/* </Layout> */}
 
 
                 </>
