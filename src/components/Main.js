@@ -132,28 +132,24 @@ export const Main = () => {
                     <hr></hr>
                     <div className="baixo">
                         <div className='esquerda'>
-                            <a href='#' className='comprar'>
-                            <Button type="primary" block>
-                                Adicionar ao carrinho <ShoppingCartOutlined />
+                            <Button type="secundary" block>
+                                <a href='#' className='comprar'>
+                                    Adicionar ao carrinho <ShoppingCartOutlined />
+                                </a>
                             </Button>
-                            </a>
                         </div>
                         <div className='esquerda2'>
-                            <a href='#' className='comprar'>
-                            <Button type="primary " block>
-                                Comprar agora
-                            </Button>
-                            </a>
+                                <Button type="secundary" block>
+                                    <a href='#' className='comprar'>
+                                    Comprar agora
+                                     </a>
+                                </Button>
                         </div>
                     </div>
                 </Sider>
             </Layout>
             {/* <Footer>Footer</Footer> */}
             {/* </Layout> */}
-
-
-
-
             {/* </main> */}
 
 
