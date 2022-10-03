@@ -192,6 +192,11 @@ h3 {
     top: 12vh;
 }
 
+.ant-layout-content{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 .nav-bottom {
     margin: 0 auto;
     width: 100vw;
@@ -225,7 +230,14 @@ h3 {
 }
 
 .branco {
-    margin: 200px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 8vh;
 }
 
 // .h4 {
