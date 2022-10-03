@@ -139,6 +139,12 @@ export const Home = () => {
                         <h3>*Descrição do produto*</h3>
                         <h3 className='bold'>*300,00 R$*</h3>
                     </div>
+                    <div className='card2'>
+                        <img src={relogio} className='imagem' alt="not found" />
+                        <h2>*Nome do produto*</h2>
+                        <h3>*Descrição do produto*</h3>
+                        <h3 className='bold'>*300,00 R$*</h3>
+                    </div>
                 </div>
             </div>
             <h1 className='h1'>Nossos Produtos</h1>

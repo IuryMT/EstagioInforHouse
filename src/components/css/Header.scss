@@ -13,6 +13,10 @@
     height: 12vh !important;
 }
 
+.ant-carousel{
+    top: 0 !important;
+}
+
 .App {
     padding: 0;
     margin: 0;
@@ -38,7 +42,7 @@ body {
     background: gray;
 }
 
-.header {
+// .header {
     // width: 100vw;
     // height: 12vh;
     // position: fixed;
@@ -49,13 +53,13 @@ body {
     // display: flex;
     // align-items: center;
     // justify-content: center;
-}
+// }
 
-.container {
+// .container {
     // padding: 0 1.5rem;
     // width: 100%;
     // margin: 0 auto;
-}
+// }
 
 .nav {
     padding: 0 1.5rem;

@@ -21,8 +21,8 @@ function App() {
     <div className="App">
       <Layout>
       <Header>
-      <header className='header'>
-        <div className='container'>
+      {/* <header className='header'>
+        <div className='container'> */}
           <nav className='nav'>
             <h1 className='logo'>Infor House</h1>
             <Search placeholder="O que você está procurando?" size="small" onSearch={onSearch} enterButton  status="error"/>
@@ -49,8 +49,8 @@ function App() {
             </div> */}
           </nav>
           {/* <div className={menu_class}></div> */}
-        </div>
-      </header>
+        {/* </div>
+      </header> */}
       </Header>
       </Layout>
       
