@@ -149,14 +149,14 @@ export const Main = () => {
                     <div className="baixo">
                         <div className='esquerda'>
                             <Button type="secundary" block>
-                                <a href='#' className='comprar'>
+                                <a className='comprar'>
                                     Adicionar ao carrinho <ShoppingCartOutlined />
                                 </a>
                             </Button>
                         </div>
                         <div className='esquerda2'>
                             <Button type="secundary" block>
-                                <a href='#' className='comprar'>
+                                <a className='comprar'>
                                     Comprar agora
                                 </a>
                             </Button>
