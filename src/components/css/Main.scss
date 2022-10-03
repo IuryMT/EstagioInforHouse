@@ -33,7 +33,7 @@ h1.title::selection {
     left: 0;
     // background-color: rgb(60, 141, 179);
     background-color: #fff;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -147,7 +147,7 @@ hr {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: bisque;
+    background-color:transparent;
     height: auto;
 }
 
@@ -155,7 +155,7 @@ hr {
     display: flex;
     width: 90%;
     margin: 5px auto;
-    background-color: rgb(121, 121, 121);
+    background-color:rgb(107, 190, 127);
     border-radius: 10px;
     align-items: center;
 }.titulo{
@@ -166,7 +166,7 @@ hr {
     display: flex;
     width: 90%;
     margin: 5px auto;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(107, 190, 127);
     border-radius: 10px;
     text-align: center;
 }.preco{
@@ -181,6 +181,32 @@ hr {
     color: rgb(200, 245, 249);
     font-size: 22px;
 
+}.ant-btn-primary{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(107, 190, 127)!important;
+    border: none;
+    font-size: 20px;
+    padding: 1px;
+    box-shadow: none;
+
+    border-radius: 10px;
+    
+}
+.ant-btn-primary{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: rgb(107, 190, 127)!important;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    box-shadow: none;
+}.ant-btn-primary:hover{
+    color: #fff;
+    background: rgb(107, 190, 127);
 }
 
 .comprar:hover {
