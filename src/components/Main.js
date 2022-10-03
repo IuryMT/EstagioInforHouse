@@ -115,7 +115,7 @@ export const Main = () => {
                 <Content>
                     <form onSubmit={salva2} className='form' id='form'>
                         <h1 className='title'>T-T</h1>
-                        <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
+                        <input maxLength={14} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
 
                         <div className='cards'>
                             {codigos.map((codigo, index) => (
@@ -132,9 +132,9 @@ export const Main = () => {
                                         <h1 className='preco'>R$ 100</h1>
                                         <h4 className='descricao'>á vista</h4>
                                     </div>
-                                    
+
                                 </div>
-                            
+
                             ))}
                         </div>
                     </form>
@@ -142,6 +142,10 @@ export const Main = () => {
                 <Sider>
                     <h2 className='esc'>Total de Compras</h2>
                     <hr></hr>
+
+                </Sider>
+                <Sider className='esc2'>
+
                     <div className="baixo">
                         <div className='esquerda'>
                             <Button type="secundary" block>
@@ -159,6 +163,7 @@ export const Main = () => {
                         </div>
                     </div>
                 </Sider>
+
             </Layout>
             {/* <Footer>Footer</Footer> */}
             {/* </Layout> */}

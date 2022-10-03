@@ -208,13 +208,24 @@ hr {
 .ant-btn-secundary:hover{
     color: #fff;
     background: rgb(107, 190, 127);
+}.esc2 {
+    height: 44vh !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background-color: #fff;
+    color: rgb(252, 252, 252);
+    text-align: center;
+    font-size: 22px;
 }
 
 .ant-layout-sider{
-    width:400px !important;
-    max-width: 400px !important;
+    width:100px !important;
+    max-width: 200px !important;
     min-width: 40vw !important;
-    height: 88vh !important;
+    height: 44vh !important;
+    right: 0!important;
     max-height: 88vh !important;
 }
 
