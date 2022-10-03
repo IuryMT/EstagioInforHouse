@@ -4,7 +4,13 @@ import relogio from "../img/relogio.png";
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import { Button } from 'antd';
-const { Footer, Sider, Content } = Layout;
+
+
+
+const { Sider, Content } = Layout;
+
+
+
 
 // forms
 
@@ -21,6 +27,8 @@ const { Footer, Sider, Content } = Layout;
 // import React from 'react';
 
 export const Main = () => {
+
+
 
     const [codigo, setCodigo] = useState();
     const [codigos, setCodigos] = useState([]);
@@ -108,6 +116,7 @@ export const Main = () => {
                     <form onSubmit={salva2} className='form' id='form'>
                         <h1 className='title'>T-T</h1>
                         <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
+
                         <div className='cards'>
                             {codigos.map((codigo, index) => (
                                 <div className='card' key={index}>
@@ -116,13 +125,16 @@ export const Main = () => {
                                     </div>
                                     <div className='content'>
                                         <h2 className='titulo'>{codigo}</h2>
+
                                         <h4 className='descricao'>Descrição</h4>
                                     </div>
                                     <div className='valor'>
                                         <h1 className='preco'>R$ 100</h1>
                                         <h4 className='descricao'>á vista</h4>
                                     </div>
+                                    
                                 </div>
+                            
                             ))}
                         </div>
                     </form>
@@ -139,11 +151,11 @@ export const Main = () => {
                             </Button>
                         </div>
                         <div className='esquerda2'>
-                                <Button type="secundary" block>
-                                    <a href='#' className='comprar'>
+                            <Button type="secundary" block>
+                                <a href='#' className='comprar'>
                                     Comprar agora
-                                     </a>
-                                </Button>
+                                </a>
+                            </Button>
                         </div>
                     </div>
                 </Sider>
@@ -156,32 +168,3 @@ export const Main = () => {
         </>
     )
 }
-
-
-// Layout do antd  dividido certinho
-/* <Layout>
-    <Content>Content</Content>
-    <Sider>Sider</Sider>
-    </Layout>
-    </Layout> */
-
-// para alterar para o antd // Sistema grid dele
-
-    // <Row>
-    //   <Col span={24}>col</Col>
-    // </Row>
-    // <Row>
-    //   <Col span={12}>col-12</Col>
-    //   <Col span={12}>col-12</Col>
-    // </Row>
-    // <Row>
-    //   <Col span={8}>col-8</Col>
-    //   <Col span={8}>col-8</Col>
-    //   <Col span={8}>col-8</Col>
-    // </Row>
-    // <Row>
-    //   <Col span={6}>col-6</Col>
-    //   <Col span={6}>col-6</Col>
-    //   <Col span={6}>col-6</Col>
-    //   <Col span={6}>col-6</Col>
-    // </Row>
