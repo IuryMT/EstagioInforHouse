@@ -139,12 +139,12 @@ export const Main = () => {
                         </div>
                     </form>
                 </Content>
-                <Sider>
+                <Sider className='des1'>
                     <h2 className='esc'>Total de Compras</h2>
                     <hr></hr>
 
                 </Sider>
-                <Sider className='esc2'>
+                <Sider className='des2'>
 
                     <div className="baixo">
                         <div className='esquerda'>
