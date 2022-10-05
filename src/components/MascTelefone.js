@@ -1,9 +1,16 @@
 import React from 'react';
 import InputCpf from 'react-input-mask';
 
+
 const onlyNumbers = (str) => str.replace(/[^0-9]/g, '');
 
-const MaskedInput = ({ value, onChange, name, mask }) => {
+const MaskedInput = ({ value, onChange, name, mask, className }) => {
+
+    // const [cpfOn, setCpfOn] = useState(false)
+    // const [cnpjOn, setCnpjOn] = useState(false)
+    // const [telefoneOn, setTelefoneOn] = useState(false)
+    // const [emailOn, setEmailOn] = useState(false)
+
     function handleChange(event){
     onChange({
         ...event,

@@ -1,13 +1,31 @@
 
 
+.ant-row .ant-form-item-row{
+    bottom: 10px;
+}
 
+.ant-space{
+    display: flex;
+}
 
+.ant-space-item{
+    width: 100% !important; 
+    height: 30px !important
+}
+
+.ant-input-affix-wrapper.ant-input-password{
+height: 100% !important;
+}
+
+input.ant-input{
+    font-size: inherit !important;
+}
 .input.active{
-    display: block;
+    display: block !important;
 }
 
 input.false{
-    display: none;
+    display: none !important;
 }
 
 .formLogin{
