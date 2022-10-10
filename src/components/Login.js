@@ -36,7 +36,7 @@ export const Login = () => {
     // const [values, setValues] = useState({});
 
     const onGenderChange = (value) => {
-       switch  (value) {
+        switch (value) {
             case 'Email':
                 setTipo("email")
                 setEmailOn(!emailOn)
@@ -93,7 +93,7 @@ export const Login = () => {
 
                 return;
 
-                default:
+            default:
         };
     }
 
@@ -185,12 +185,17 @@ export const Login = () => {
                                 onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
                             <Input type={tipo} value={tel} onKeyUp={handleKeyUpTel}
                                 onChange={(event) => setTel(event.target.value)} className={`input ${telefoneOn === true && 'active'}`} maxLength={11} />
-                            <Input type={tipo} value={email} maxLength={5}
+                            <Input type={tipo} value={email}
                                 onChange={(event) => setEmail(event.target.value)} className={`input ${emailOn === true && 'active'}`} />
                             <br></br>
                             <Space direction="vertical">
                                 <Input.Password
                                     placeholder="Password"
+                                    rules={[
+                                        {
+                                            required: true,
+                                        },
+                                    ]}
                                     iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                                 />
                             </Space>
