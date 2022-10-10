@@ -22,6 +22,7 @@
     height: 100% !important;
     margin-bottom: 10px !important;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 input.ant-input {
@@ -43,8 +44,8 @@ input.false {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(155, 155, 155);
-    padding: 30px;
+    background-color: rgb(176, 176, 176);
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -93,9 +94,11 @@ input.false {
     margin-right: 50% !important;
     margin-top: 10px;
 }
-h1{
+.h1{
     color: rgb(255, 255, 255);
     font-size: 36px;
+    padding: 30px;
+    margin: 0!important;
 }
 
 .ant-btn-default {
@@ -118,7 +121,8 @@ h1{
 
 .ant-row.ant-form-item-row {
     align-items: center !important;
-} .ant-form-item-label>label {
+}
+.ant-form-item-label>label {
     color: #fff;
     height: 0;
 }

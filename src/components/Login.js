@@ -155,7 +155,7 @@ export const Login = () => {
             <Layout>
                 <Content>
                     <form className='formLogin'>
-                        <h1>Login</h1>
+                        <h1 className='h1'>Login</h1>
                         <Form.Item
                             name="gender"
                             label="Tipo de Dado"
@@ -243,6 +243,11 @@ export const Login = () => {
                                     ) : null
                                 }
                             </Form.Item>
+
+                            <a className="login-form-forgot" href="">
+                                Esqueceu sua senha? Relaxa.
+                            </a>
+
                             <Form.Item {...tailLayout}>
                                 <Button type="primary" htmlType="submit">
                                     Enviar
