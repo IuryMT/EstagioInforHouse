@@ -1,7 +1,7 @@
 import './css/Login2.scss';
 import { Button, Form, Input, Select, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Layout } from 'antd';
 // import InputMask from 'react-input-mask';
 const { Option } = Select;
@@ -36,7 +36,7 @@ export const Login = () => {
     // const [values, setValues] = useState({});
 
     const onGenderChange = (value) => {
-        switch (value) {
+       switch  (value) {
             case 'Email':
                 setTipo("email")
                 setEmailOn(!emailOn)
@@ -51,7 +51,7 @@ export const Login = () => {
                 return;
 
             case 'CNPJ':
-                setTipo("number")
+                setTipo("text")
                 setCnpjOn(!cnpjOn)
                 if (cpfOn === true) {
                     setCpfOn(false)
@@ -65,7 +65,7 @@ export const Login = () => {
                 return;
 
             case 'Telefone':
-                setTipo("number")
+                setTipo("text")
                 setTelefoneOn(!telefoneOn)
                 if (cnpjOn === true) {
                     setCnpjOn(false)
@@ -79,7 +79,7 @@ export const Login = () => {
                 return;
 
             case 'CPF':
-                setTipo("number")
+                setTipo("text")
                 setCpfOn(!cpfOn)
                 if (cnpjOn === true) {
                     setCnpjOn(false)
@@ -92,8 +92,35 @@ export const Login = () => {
                 }
 
                 return;
+
+                default:
         };
     }
+
+    const handleKeyUpCpf = useCallback((e) => {
+        e.currentTarget.maxLength = 11;
+        let value = e.currentTarget.value;
+        value = value.replace(/\D/g, "");
+        value = value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1-$2-$3.$4")
+        e.currentTarget.value = value;
+    }, [])
+
+
+    const handleKeyUpCnpj = useCallback((e) => {
+        e.currentTarget.maxLength = 14;
+        let value = e.currentTarget.value;
+        value = value.replace(/\D/g, "");
+        value = value.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5")
+        e.currentTarget.value = value;
+    }, [])
+
+    const handleKeyUpTel = useCallback((e) => {
+        e.currentTarget.maxLength = 11;
+        let value = e.currentTarget.value;
+        value = value.replace(/\D/g, "");
+        value = value.replace(/^(\d{0})(\d{2})(\d{5})(\d{4})/, "$1($2) $3.$4")
+        e.currentTarget.value = value;
+    }, [])
 
     /*} form.setFieldsValue({
         note: 'Hi there!',
@@ -150,24 +177,24 @@ export const Login = () => {
                             </Select>
                         </Form.Item>
                         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                        
-                        
-                                <Input type={tipo} value={cpf} maxLength={11}
-                                    onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
-                                <Input type={tipo} value={cnpj} maxLength={14}
-                                    onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
-                                <Input type={tipo} value={tel}
-                                    onChange={(event) => setTel(event.target.value)} className={`input ${telefoneOn === true && 'active'}`} maxLength={11} />
-                                <Input type={tipo} value={email} maxLength={5}
-                                    onChange={(event) => setEmail(event.target.value)} className={`input ${emailOn === true && 'active'}`} />
-                                <br></br>
-                                <Space direction="vertical">
-                                    <Input.Password
-                                        placeholder="Password"
-                                        iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-                                    />
-                                </Space>
-                                {/* <MaskedInput
+
+
+                            <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf}
+                                onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
+                            <Input type={tipo} value={cnpj} onKeyUp={handleKeyUpCnpj}
+                                onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
+                            <Input type={tipo} value={tel} onKeyUp={handleKeyUpTel}
+                                onChange={(event) => setTel(event.target.value)} className={`input ${telefoneOn === true && 'active'}`} maxLength={11} />
+                            <Input type={tipo} value={email} maxLength={5}
+                                onChange={(event) => setEmail(event.target.value)} className={`input ${emailOn === true && 'active'}`} />
+                            <br></br>
+                            <Space direction="vertical">
+                                <Input.Password
+                                    placeholder="Password"
+                                    iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                                />
+                            </Space>
+                            {/* <MaskedInput
                                     type={tipo}
                                     name="cpf"
                                     mask="999.999.999-99"
