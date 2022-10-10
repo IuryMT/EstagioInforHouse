@@ -8,13 +8,10 @@
 //     position: relative;
 // }
 
-.des1 {
-    
-    height: 98vh !important;
-}
+
 
 .des2 {
-    height: 28vh !important;
+    
     position: fixed;
     bottom: 0;
     right: 0;
@@ -117,7 +114,8 @@ img {
 .ant-layout-has-sider {
     overflow-y: hidden;
     width: 100vw !important;
-    height: 48vh !important;
+    max-height:50vh !important;
+    height: 20%!important;
 }
 
 .content {

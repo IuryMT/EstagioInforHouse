@@ -1,80 +1,124 @@
-
-
-.ant-row .ant-form-item-row{
+.ant-row .ant-form-item-row {
     bottom: 10px;
+    
 }
 
-.ant-space{
+.ant-row,
+.ant-row:after,
+.ant-row:before {
+    align-items: center !important;
+}
+
+.ant-space {
     display: flex;
 }
 
-.ant-space-item{
-    width: 100% !important; 
+.ant-space-item {
+    width: 100% !important;
     height: 30px !important
 }
 
-.ant-input-affix-wrapper.ant-input-password{
-height: 100% !important;
+.ant-input-affix-wrapper.ant-input-password {
+    height: 100% !important;
+    margin-bottom: 10px !important;
+    border-radius: 10px;
 }
 
-input.ant-input{
+input.ant-input {
     font-size: inherit !important;
 }
-.input.active{
+
+.input.active {
     display: block !important;
 }
 
-input.false{
+input.false {
     display: none !important;
 }
 
-.formLogin{
+.formLogin {
     width: 40vw;
     height: 50vh;
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: gray;
-    padding: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(155, 155, 155);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 // .ant-layout-header{
 //     display: none;
 // }
 
-.ant-layout-content{
+.ant-layout-content {
     width: 100vw;
     max-width: 100vw;
     height: 88vh;
     max-height: 88vh;
 }
 
-.ant-select-selection-search-input{
-width: 50% !important;
+.ant-select-selection-search-input {
+    width: 30% !important;
+
 }
 
-.ant-form-item-control{
-width: 50vw !important;
-flex-grow: 0 !important;
+.ant-form-item-control {
+    width: 50vw !important;
+    flex-grow: 0 !important;
+    color: #fff;
 }
 
-.ant-col-16{
+.ant-col-16 {
     flex-grow: 1 !important;
 }
 
-.ant-col-8{
+.ant-col-8 {
     flex: 0 0 10% !important;
 }
 
-.ant-form-item-control-input{
-width: 100% !important;
-}
-
-.ant-input{
+.ant-form-item-control-input {
     width: 100% !important;
 }
 
-.ant-form-item-control-input{
+.ant-input {
     width: 100% !important;
+    border-radius: 10px !important;
+}
+
+///////////////////////////////////////////////////////Wario
+.ant-form-item-control-input-content {
+    width: 100% !important;
+    margin-right: 50% !important;
+    margin-top: 10px;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+}
+
+.ant-btn-default {
+    border-radius: 7px;
+    margin-right: 5px!important;
+    margin-left: 5px!important;
+    
+
+}
+.ant-btn-primary {
+    border-radius: 7px;
+    // margin-right: 5px!important;
+    // margin-top: 50px;
+}
+
+.ant-select-selector {
+    border-radius: 10px !important;
+}
+
+
+.ant-row.ant-form-item-row {
+    align-items: center !important;
+} .ant-form-item-label>label {
+    color: #fff;
+    height: 0;
 }
