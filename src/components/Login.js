@@ -36,7 +36,7 @@ export const Login = () => {
     // const [values, setValues] = useState({});
 
     const onGenderChange = (value) => {
-       switch  (value) {
+        switch (value) {
             case 'Email':
                 setTipo("email")
                 setEmailOn(!emailOn)
@@ -93,7 +93,7 @@ export const Login = () => {
 
                 return;
 
-                default:
+            default:
         };
     }
 
@@ -155,7 +155,7 @@ export const Login = () => {
             <Layout>
                 <Content>
                     <form className='formLogin'>
-                        <h1>Login</h1>
+                        <h1 className='h1'>Login</h1>
                         <Form.Item
                             name="gender"
                             label="Tipo de Dado"
@@ -238,6 +238,11 @@ export const Login = () => {
                                     ) : null
                                 }
                             </Form.Item>
+
+                            <a className="login-form-forgot" href="">
+                                Esqueceu sua senha? Relaxa.
+                            </a>
+
                             <Form.Item {...tailLayout}>
                                 <Button type="primary" htmlType="submit">
                                     Enviar
