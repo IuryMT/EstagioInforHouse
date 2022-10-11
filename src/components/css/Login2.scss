@@ -38,8 +38,8 @@ input.false {
 }
 
 .formLogin {
-    width: 40vw;
-    height: 50vh;
+    width: 35vw;
+    height: 60vh;
     position: relative;
     top: 50%;
     left: 50%;
@@ -92,6 +92,7 @@ input.false {
 .ant-form-item-control-input-content {
     width: 100% !important;
     margin-right: 50% !important;
+    display: flex !important;
     margin-top: 10px;
 }
 .h1{
