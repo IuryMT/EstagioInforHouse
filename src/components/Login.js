@@ -232,7 +232,7 @@ export const Login = () => {
     //             else {
     //                 return true;
     //             }
-                
+
     //         }
 
 
@@ -294,7 +294,7 @@ export const Login = () => {
 
     //     }
     //     else {
-            
+
     //         if ((/[a-zA-Z]/).test(caractere) === true) {
     //             let car_replaced = caractere.replace(/(\.)|(\/)|(\-)/g, '')
     //             console.log('email')
@@ -378,7 +378,7 @@ export const Login = () => {
                             </Select>
                         </Form.Item> */}
                         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                            <InputMasc onChange={(event) => setComplet(event.target.value)} onKeyUp={InputMasc} value={complet}/>
+                            <InputMasc onChange={(event) => setComplet(event.target.value)} onKeyUp={InputMasc} value={complet} />
 
                             {/* <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
                                 onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
@@ -424,7 +424,7 @@ export const Login = () => {
                                 }
                             </Form.Item>
 
-                            <a className="login-form-forgot" href="">
+                            <a className="login-form-forgot" href="...">
                                 Esqueceu sua senha? Relaxa.
                             </a>
 
