@@ -2,6 +2,7 @@ import './css/Login2.scss';
 import { Button, Form, Input, Select, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { InputMasc } from './InputMasc';
+import { InputFilter } from './InputFilter';
 import React, { useState, useCallback } from 'react';
 import { Layout } from 'antd';
 // const { Option } = Select;
@@ -23,19 +24,11 @@ const tailLayout = {
 const { Content } = Layout;
 
 export const Login = () => {
-    // const [cpfOn, setCpfOn] = useState(false)
-    // const [cnpjOn, setCnpjOn] = useState(false)
-    // const [telefoneOn, setTelefoneOn] = useState(false)
-    // const [emailOn, setEmailOn] = useState(false)
     const [form] = Form.useForm();
-    // const [tipo, setTipo] = useState("text")
-    // const [cpf, setCpf] = useState('');
-    // const [cnpj, setCnpj] = useState('');
     const [complet, setComplet] = useState('');
-    // const [tel, setTel] = useState('');
-    // const [email, setEmail] = useState('');
     // const [values, setValues] = useState({});
 
+<<<<<<< HEAD
     // const onGenderChange = (value) => {
     //     switch (value) {
     //         case 'Email':
@@ -330,25 +323,15 @@ export const Login = () => {
         // console.log(values);
     };
 
+=======
+    
+>>>>>>> a02ed8f7280eab13bb42bb05eaa2ce59500c68c9
     const onReset = () => {
         form.resetFields();
     };
 
-    // const onFill = () => {
-    //     form.setFieldsValue({
-    //         note: 'Hello world!',
-    //         gender: 'male',
-    //     });
-    // };
 
 
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log({ email, password });
-    // }
 
 
     return (
@@ -377,8 +360,15 @@ export const Login = () => {
                                 <Option value="CPF">CPF</Option>
                             </Select>
                         </Form.Item> */}
+<<<<<<< HEAD
                         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
                             <InputMasc onChange={(event) => setComplet(event.target.value)} onKeyUp={InputMasc} value={complet} />
+=======
+                        <Form {...layout} form={form} name="control-hooks">
+                            <InputMasc  />
+
+                            
+>>>>>>> a02ed8f7280eab13bb42bb05eaa2ce59500c68c9
 
                             {/* <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
                                 onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
