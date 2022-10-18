@@ -150,7 +150,7 @@ export const InputMasc = (e) => {
 
     return (
         <>
-            <input placeholder='CPF, Email, Telefone ou CNPJ' onKeyUp={InputMasc} value={complet} onChange={e => setComplet(e.target.value)} rules={[{ required: true, },]} />
+            <input placeholder='CPF, Email, Telefone ou CNPJ' onKeyUp={InputMasc} value={complet} onChange={(event) => setComplet(event.target.value)} />
         </>
     )
 
