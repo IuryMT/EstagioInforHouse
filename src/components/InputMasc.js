@@ -5,10 +5,10 @@ export function InputMasc(e) {
 
     const [complet, setComplet] = useState('');
     // CPF value
-
+    
     value = e.currentTarget.value;
     console.log(value);
-    let caractere = e.currentTarget.value;c
+    let caractere = e.currentTarget.value;
     console.log(caractere)
     let cpf = caractere.length;
 
@@ -146,4 +146,4 @@ export function InputMasc(e) {
             </>
         )
 
-    }
+    

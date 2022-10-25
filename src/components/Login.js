@@ -28,7 +28,7 @@ export const Login = () => {
     const [complet, setComplet] = useState('');
     // const [values, setValues] = useState({});
 
-<<<<<<< HEAD
+
     // const onGenderChange = (value) => {
     //     switch (value) {
     //         case 'Email':
@@ -323,9 +323,6 @@ export const Login = () => {
         // console.log(values);
     };
 
-=======
-    
->>>>>>> a02ed8f7280eab13bb42bb05eaa2ce59500c68c9
     const onReset = () => {
         form.resetFields();
     };
@@ -360,17 +357,13 @@ export const Login = () => {
                                 <Option value="CPF">CPF</Option>
                             </Select>
                         </Form.Item> */}
-<<<<<<< HEAD
-                        <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                            <InputMasc onChange={(event) => setComplet(event.target.value)} onKeyUp={InputMasc} value={complet} />
-=======
+
+
                         <Form {...layout} form={form} name="control-hooks">
                             <InputMasc  />
 
-                            
->>>>>>> a02ed8f7280eab13bb42bb05eaa2ce59500c68c9
 
-                            {/* <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
+                          {/* <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
                                 onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
                             <Input type={tipo} value={cnpj} onKeyUp={handleKeyUpCnpj} placeholder="99-999-999/9999-99"
                                 onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
