@@ -1,11 +1,9 @@
 import './css/Login2.scss';
-import { Button, Form, Input, Select, Space } from 'antd';
+import { Button, Form, Input, Space } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { InputMasc } from './InputMasc';
-import { InputFilter } from './InputFilter';
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { Layout } from 'antd';
-// const { Option } = Select;
 const layout = {
     labelCol: {
         span: 8,
@@ -25,7 +23,6 @@ const { Content } = Layout;
 
 export const Login = () => {
     const [form] = Form.useForm();
-    const [complet, setComplet] = useState('');
     // const [values, setValues] = useState({});
 
     
@@ -34,49 +31,16 @@ export const Login = () => {
     };
 
 
-
-
-
     return (
         <>
             <Layout>
                 <Content>
                     <div className='formLogin'>
                         <h1 className='h1'>Login</h1>
-                        {/* <Form.Item
-                            name="gender"
-                            label="Tipo de Dado"
-                            rules={[
-                                {
-                                    required: true,
-                                },
-                            ]}
-                        >
-                            <Select
-                                placeholder="Selecione a opção de Login"
-                                onChange={onGenderChange}
-                                allowClear
-                            >
-                                <Option value="Email">Email</Option>
-                                <Option value="CNPJ">CNPJ</Option>
-                                <Option value="Telefone">Telefone</Option>
-                                <Option value="CPF">CPF</Option>
-                            </Select>
-                        </Form.Item> */}
-                        <Form {...layout} form={form} name="control-hooks">
+                        
+                        {/* <Form {...layout} form={form} name="control-hooks"> */}
                             <InputMasc  />
 
-                            
-
-                            {/* <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
-                                onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
-                            <Input type={tipo} value={cnpj} onKeyUp={handleKeyUpCnpj} placeholder="99-999-999/9999-99"
-                                onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
-                            <Input type={tipo} value={tel} onKeyUp={handleKeyUpTel} placeholder="(99) 99999-9999"
-                                onChange={(event) => setTel(event.target.value)} className={`input ${telefoneOn === true && 'active'}`} />
-
-                            <Input type={tipo} value={email} placeholder="example@gmail.com"
-                                onChange={(event) => setEmail(event.target.value)} className={`input ${emailOn === true && 'active'}`} /> */}
                             <br></br>
                             <Space direction="vertical">
                                 <Input.Password
@@ -91,7 +55,7 @@ export const Login = () => {
                             </Space>
 
 
-                            <Form.Item
+                            {/* <Form.Item
                                 noStyle
                                 shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
                             >
@@ -110,24 +74,24 @@ export const Login = () => {
                                         </Form.Item>
                                     ) : null
                                 }
-                            </Form.Item>
+                            </Form.Item> */}
 
                             <a className="login-form-forgot" href="">
                                 Esqueceu sua senha? Relaxa.
                             </a>
 
-                            <Form.Item {...tailLayout}>
+                            {/* <Form.Item {...tailLayout}>
                                 <Button type="primary" htmlType="submit">
                                     Enviar
                                 </Button>
                                 <Button htmlType="button" onClick={onReset}>
                                     Redefinir
-                                </Button>
+                                </Button> */}
                                 {/* <Button type="link" htmlType="button" onClick={onFill}>
                         Fill form
                     </Button> */}
-                            </Form.Item>
-                        </Form>
+                            {/* </Form.Item>
+                        </Form> */}
                         {/* <div className='content'>
                 <form onSubmit={handleSubmit} className="Formulario">
                     <h1>Login</h1>
