@@ -25,10 +25,6 @@
     margin-bottom: 10px;
 }
 
-input.ant-input {
-    font-size: inherit !important;
-}
-
 .input.active {
     display: block !important;
 }
@@ -84,8 +80,9 @@ input.false {
 }
 
 .ant-input {
-    width: 100% !important;
+    width: 60% !important;
     border-radius: 10px !important;
+    font-size: inherit !important;
 }
 
 ///////////////////////////////////////////////////////Wario
