@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Form, Input, Select, Space } from 'antd';
+import { Button, Form, Input, Select } from 'antd';
 import { Layout } from 'antd';
 const { Option } = Select;
 const layout = {
@@ -159,20 +159,20 @@ export function InputFilter() {
         e.currentTarget.value = value;
     }, [])
 
-    const onFinish = (values) => {
-        console.log(values);
-    };
+    // const onFinish = (values) => {
+    //     console.log(values);
+    // };
 
     const onReset = () => {
         form.resetFields();
     };
 
-    const onFill = () => {
-        form.setFieldsValue({
-            note: 'Hello world!',
-            gender: 'male',
-        });
-    };
+    // const onFill = () => {
+    //     form.setFieldsValue({
+    //         note: 'Hello world!',
+    //         gender: 'male',
+    //     });
+    // };
 
 
 
