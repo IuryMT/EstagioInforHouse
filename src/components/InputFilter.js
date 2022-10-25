@@ -136,15 +136,6 @@ export function InputFilter() {
         return true;
     }
 
-    // function validarNome() {
-    //     var strCpf = document.getElementById('cpf1').value;
-    //     if (!verificarCPF(strCpf)) {
-    //         console.log("CPF inválido");
-    //         return;
-    //     }
-    //     document.getElementById('frm').submit();
-    // }
-
     const handleKeyUpCpf = useCallback((e) => {
         e.currentTarget.maxLength = 11;
         let value = e.currentTarget.value;

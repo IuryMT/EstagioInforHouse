@@ -25,6 +25,7 @@ export function InputMasc(e) {
                 inputValue == "77777777777" ||
                 inputValue == "88888888888" ||
                 inputValue == "99999999999") {
+
                 return false;
             }
             // Valida 1º digito, soma os números até a penultima casa, e verifica a condição com último caractere
@@ -133,5 +134,4 @@ export function InputMasc(e) {
             <Input placeholder='Cpf, Email, Telefone ou CNPJ' onKeyUp={handleComplet} value={complet} onChange={(event) => setComplet(event.target.value)} />
         </>
     )
-
 }
