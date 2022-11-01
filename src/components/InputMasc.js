@@ -14,17 +14,19 @@ export function InputMasc(e) {
             if (inputSize === 0) return false;
 
             // Elimina Cpfs inválidos conhecidos	
-            if (inputSize !== 11 ||
-                inputValue === "00000000000" ||
-                inputValue === "11111111111" ||
-                inputValue === "22222222222" ||
-                inputValue === "33333333333" ||
-                inputValue === "44444444444" ||
-                inputValue === "55555555555" ||
-                inputValue === "66666666666" ||
-                inputValue === "77777777777" ||
-                inputValue === "88888888888" ||
-                inputValue === "99999999999") {
+            
+            if (inputSize != 11 ||
+                inputValue == "00000000000" ||
+                inputValue == "11111111111" ||
+                inputValue == "22222222222" ||
+                inputValue == "33333333333" ||
+                inputValue == "44444444444" ||
+                inputValue == "55555555555" ||
+                inputValue == "66666666666" ||
+                inputValue == "77777777777" ||
+                inputValue == "88888888888" ||
+                inputValue == "99999999999") {
+
                 return false;
             }
             // Valida 1º digito, soma os números até a penultima casa, e verifica a condição com último caractere
@@ -51,22 +53,69 @@ export function InputMasc(e) {
                 return true;
             }
 
+            // Elimina CPFs inválidos conhecidos	
+            if (cpf != 11 ||
+                caractere == "00000000000" ||
+                caractere == "11111111111" ||
+                caractere == "22222222222" ||
+                caractere == "33333333333" ||
+                caractere == "44444444444" ||
+                caractere == "55555555555" ||
+                caractere == "66666666666" ||
+                caractere == "77777777777" ||
+                caractere == "88888888888" ||
+                caractere == "99999999999") {
+                console.log('passou 04')
+                return false;
+            }
+            // Valida 1  digito, soma os números até a penultima casa, e verifica a condição com último caracter
+            let i = 0;
+            let add = 0;
+            for (i = 0; i < 9; i++)
+                add += parseInt(caractere.charAt(i)) * (10 - i);
+            let rev = 11 - (add % 11);
+            if (rev === 10 || rev === 11)
+                rev = 0;
+            if (rev != parseInt(caractere.charAt(9))) {
+                console.log('passou 06')
+
+                return false;
+            }
+            // Valida 2o digito, soma todos os números, verifica com penultimo caracter
+            add = 0;
+            for (i = 0; i < 10; i++)
+                add += parseInt(caractere.charAt(i)) * (11 - i);
+            rev = 11 - (add % 11);
+            if (rev === 10 || rev === 11)
+                rev = 0;
+            if (rev != parseInt(caractere.charAt(10))) {
+                console.log(rev, caractere.charAt(10))
+                console.log('passou 07')
+
+                return false;
+            }
+            else {
+                return true;
+            }
+
         }
 
-        const phone_validation = (inputSize) => {
-            // Retira todos os caracteres menos os números 
-            inputValue = inputValue.replace(/\D/g, '');
-            // Verifica se tem a quantidade de números correta
-            if (!(inputSize >= 10 && inputSize <= 11)) return false;
+        const telefone_validation = (cpf) => {
+            //retira todos os caracteres menos os números
+            caractere = caractere.replace(/\D/g, '');
+            // verifica se tem a quantidade de números correto
+            if (!(cpf >= 10 && cpf <= 11)) return false;
 
             // Se tiver 11 caracteres, verificar se começa com 9 o celular
             if (inputSize === 11 && parseInt(inputValue
                 .substring(2, 3)) !== 9) return false;
 
-            // Verifica se não é nenhum número digitado errado (propositalmente)
+            //verifica se não é nenhum numero digitado errado (propositalmente)
             for (var n = 0; n < 10; n++) {
+
                 if (inputValue === new Array(11).join(n) || inputValue
                     === new Array(12).join(n)) return false;
+
             }
             //DDDs validos
             var codigosDDD = [11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -78,11 +127,13 @@ export function InputMasc(e) {
                 86, 87, 88, 89, 91, 92, 93, 94, 95,
                 96, 97, 98, 99];
             // verifica se o DDD é valido
+
             if (codigosDDD.indexOf(parseInt(inputValue
                 .substring(0, 2))) === -1) return false;
 
             //  Verifica se o numero é realmente válido.
             if (new Date().getFullYear() < 2017) return true;
+            
             if (inputSize === 10 && [2, 3, 4, 5, 7].indexOf(parseInt(inputValue
                 .substring(2, 3))) === -1) return false;
 
@@ -106,7 +157,7 @@ export function InputMasc(e) {
 
         }
         else {
-            
+
             if ((/[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/).test(inputValue) === true) {
                 let car_replaced = inputValue.replace(/(\.)|(\/)|()/g, '')
                 e.currentTarget.value = car_replaced;
@@ -128,5 +179,4 @@ export function InputMasc(e) {
             <Input placeholder='Cpf, Email, Telefone ou CNPJ' onKeyUp={handleComplet} value={complet} onChange={(event) => setComplet(event.target.value)} name="user"/>
         </>
     )
-
 }
