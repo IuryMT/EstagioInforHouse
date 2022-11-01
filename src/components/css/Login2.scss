@@ -6,7 +6,7 @@
 .ant-row,
 .ant-row:after,
 .ant-row:before {
-    align-items: center !important;
+    align-items: center;
 }
 
 .ant-space {
@@ -49,6 +49,13 @@ input.false {
 //     display: none;
 // }
 
+.label{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0!important;
+    text-align: start !important;
+}
+
 .ant-layout-content {
     width: 100vw;
     max-width: 100vw;
@@ -58,7 +65,6 @@ input.false {
 
 .ant-select-selection-search-input {
     width: 30% !important;
-
 }
 
 .ant-form-item-control {
@@ -80,9 +86,14 @@ input.false {
 }
 
 .ant-input {
-    width: 60% !important;
+    width: 100% !important;
     border-radius: 10px !important;
     font-size: inherit !important;
+}
+
+.login-form-forgot{
+    color:rgb(255, 255, 255);
+    margin: auto !important;
 }
 
 ///////////////////////////////////////////////////////Wario
@@ -92,17 +103,18 @@ input.false {
     display: flex !important;
     margin-top: 10px;
 }
-.h1{
+.titulo2{
     color: rgb(255, 255, 255);
     font-size: 36px;
     padding: 30px;
-    margin: 0!important;
+    margin: 0;
+    text-align: center;
 }
 
 .ant-btn-default {
     border-radius: 7px;
-    margin-right: 5px!important;
-    margin-left: 5px!important;
+    margin-right: 5px;
+    margin-left: 5px;
     
 
 }
@@ -118,7 +130,7 @@ input.false {
 
 
 .ant-row.ant-form-item-row {
-    align-items: center !important;
+    align-items: center;
 }
 .ant-form-item-label>label {
     color: #fff;
