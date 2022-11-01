@@ -159,22 +159,9 @@ export function InputFilter() {
         e.currentTarget.value = value;
     }, [])
 
-    // const onFinish = (values) => {
-    //     console.log(values);
-    // };
-
     const onReset = () => {
         form.resetFields();
     };
-
-    // const onFill = () => {
-    //     form.setFieldsValue({
-    //         note: 'Hello world!',
-    //         gender: 'male',
-    //     });
-    // };
-
-
 
     return (
         <>
