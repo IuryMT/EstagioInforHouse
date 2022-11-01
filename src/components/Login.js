@@ -1,50 +1,36 @@
 import './css/Login2.scss';
-import { Button, Form, Input, Space } from 'antd';
+import { Input, Space, Button } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { InputMasc } from './InputMasc';
+import { Routes, Route, Link } from 'react-router-dom';
+import { Main } from './Main';
 import React from 'react';
 import { Layout } from 'antd';
-const layout = {
-    labelCol: {
-        span: 8,
-    },
-    wrapperCol: {
-        span: 16,
-    },
-};
-const tailLayout = {
-    wrapperCol: {
-        offset: 8,
-        span: 16,
-    },
-};
 
 const { Content } = Layout;
 
 export const Login = () => {
-    const [form] = Form.useForm();
-    // const [values, setValues] = useState({});
-
-    
-    const onReset = () => {
-        form.resetFields();
-    };
-
 
     return (
         <>
             <Layout>
                 <Content>
-                    <div className='formLogin'>
-                        <h1 className='h1'>Login</h1>
-                        
-                        {/* <Form {...layout} form={form} name="control-hooks"> */}
-                            <InputMasc  />
 
-                            <br></br>
+                    <div className='formLogin'>
+                        <form method='post'>
+                            <h1 className='titulo2'>Login</h1>
+
+                            {/* <Form {...layout} form={form} name="control-hooks"> */}
+                            <label className="label" htmlFor='user'>Usuário</label>
+                            <InputMasc />
+
+                            <br></br><br></br>
+                            <label className="label" htmlFor='password'>Senha</label>
                             <Space direction="vertical">
+
                                 <Input.Password
                                     placeholder="Senha"
+                                    name="password"
                                     rules={[
                                         {
                                             required: true,
@@ -53,46 +39,18 @@ export const Login = () => {
                                     iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                                 />
                             </Space>
+                            <br></br>
+                            <Link className="login-form-forgot" to="/cadastro">Esqueceu sua senha? Relaxa.</Link>
+                            {/* <a className="login-form-forgot" href="">
+                                
+                            </a> */}
+                            <br></br><br></br><br></br>
+
+                            {/* <input type="submit" value='Enviar' />  */}
+                            <Button type="primary" htmlType="submit">Enviar</Button>
 
 
-                            {/* <Form.Item
-                                noStyle
-                                shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
-                            >
-                                {({ getFieldValue }) =>
-                                    getFieldValue('gender') === 'other' ? (
-                                        <Form.Item
-                                            name="customizeGender"
-                                            label="Customize Gender"
-                                            rules={[
-                                                {
-                                                    required: true,
-                                                },
-                                            ]}
-                                        >
-                                            <Input />
-                                        </Form.Item>
-                                    ) : null
-                                }
-                            </Form.Item> */}
-
-                            <a className="login-form-forgot" href="">
-                                Esqueceu sua senha? Relaxa.
-                            </a>
-
-                            {/* <Form.Item {...tailLayout}>
-                                <Button type="primary" htmlType="submit">
-                                    Enviar
-                                </Button>
-                                <Button htmlType="button" onClick={onReset}>
-                                    Redefinir
-                                </Button> */}
-                                {/* <Button type="link" htmlType="button" onClick={onFill}>
-                        Fill form
-                    </Button> */}
-                            {/* </Form.Item>
-                        </Form> */}
-                        {/* <div className='content'>
+                            {/* <div className='content'>
                 <form onSubmit={handleSubmit} className="Formulario">
                     <h1>Login</h1>
                     <div id="field">
@@ -122,9 +80,15 @@ export const Login = () => {
                     </div>
                 </form>
             </div> */}
+                        </form>
                     </div>
+
                 </Content>
             </Layout>
+
+            <Routes>
+                <Route path="/cadastro" element={<Main />} />
+            </Routes>
         </>
     )
 }

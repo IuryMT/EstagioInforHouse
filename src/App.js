@@ -2,10 +2,9 @@
 import React, { useState } from 'react';
 import './components/css/Header.scss';
 import { Routes, Route, Link } from 'react-router-dom';
-import { Home } from './pages/Home/index.js';
-// import { Login } from './pages/Login/index.js';
-import { Login } from './components/Login.js';
-import { Main } from './components/Main.js';
+import { Home } from './pages/Home/index';
+import { Login } from './components/Login';
+import { Main } from './components/Main';
 import { Input } from 'antd';
 import { Layout } from 'antd';
 const { Header } = Layout;
@@ -21,9 +20,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-      <Header>
-      {/* <header className='header'>
-        <div className='container'> */}
+        <Header>
           <nav className='nav'>
             <h1 className='logo'>Infor House</h1>
             <Search placeholder="O que você está procurando?" size="small" onSearch={onSearch} enterButton  status="error"/>
@@ -43,35 +40,16 @@ function App() {
                 <Link to="/vendas">Venda</Link>
               </li>
             </ul>
-            {/* <div className='burger-menu' onClick={updateMenu}>
-              <div className={burger_class}></div>
-              <div className={burger_class}></div>
-              <div className={burger_class}></div>
-            </div> */}
           </nav>
-          {/* <div className={menu_class}></div> */}
-        {/* </div>
-      </header> */}
-      </Header>
+        </Header>
       </Layout>
-      
+
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="vendas" element={<Main />} />
+        <Route path="*" element={<Home />} />
+        <Route path="/login/*" element={<Login />} />
+        <Route path="/vendas" element={<Main />} />
       </Routes>
-      {/* <Header />
-      <Section1 />
-      <Main />
-      <Login />
-
-      <Router>
-        <Routes>
-          <Route path='/Login' element={<Login />} />
-          <Route exact path="/" component={App}/>
-        </Routes>
-      </Router> */}
     </div>
   );
 };
