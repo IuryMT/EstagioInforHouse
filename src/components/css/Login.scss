@@ -1,48 +1,138 @@
-.content{
+.conteudoLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: gray;
-    padding: 0 2rem;
+    position: absolute;
+    top: 12vh;
+    // max-height: 100vh;
+    // max-width: 100vw;
+    width: 100vw;
+    height: 88vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-h1{
-    font-size: 50px;
-    font-family: sans-serif;
+//     background: rgb(254,254,254);
+// background: linear-gradient(180deg, rgba(254,254,254,1) 0%, rgba(118,123,126,1) 89%, rgba(29,32,37,1) 100%);
+
+
+// background-color: rgb(168, 167, 167);
+//     background: rgb(1,164,154);
+// background: linear-gradient(42deg, rgba(1,164,154,1) 0%, rgba(0,0,0,1) 50%, rgba(203,0,0,1) 100%);
+// box-shadow: 5px 5px 0px rgb(0, 0, 0);
+// }.bgf{
+//     height: 100%;
+//     width: 100%;
+//     opacity: 1;
+// }
+
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
 }
 
-.Formulario{
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+    float: left;
+}
+
+#components-form-demo-normal-login .login-form-button {
     width: 100%;
-    max-width: 500px;
-    background-color: #f1f1f1;
-    padding: 0.5rem;
 }
 
-#field{
+.ant-input-affix-wrapper {
+    border-radius: 10px;
+}
+
+.ant-checkbox+span {
+    margin-right: 5px;
+    padding-right: 16px;
+    padding-left: 8px;
+}
+.login-form-button{
+    margin-right: 5px;
+    background: rgb(117, 116, 116)!important;
+    border: none;
+}Input{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+////////////////////////////////////  
+
+h1 {
+    font-size: 50px;
+    font-family: Verdana;
+    text-align: center;
+    margin-top: 25px !important;
+    margin-bottom: 50px !important;
+}
+
+.Formulario {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #dddddd;
+    padding: 5px 10px 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#field {
     padding-bottom: 0.5rem;
+
 }
 
-label{
+label {
+    text-align: left;
     display: block;
+    font-size: 16px;
+    font-family: verdana;
 }
 
-.input{
+.input {
     width: 100%;
     outline: none;
     border: none;
     border-radius: 4px;
-    padding: 5px;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 4px 4px 7px rgb(165, 164, 164);
 }
 
-#actions{
+#actions {
     text-align: center;
     margin-top: 0.5rem;
 }
 
-.enviar{
+.enviar {
     margin: 10px auto;
-    padding: 5px;
+    padding: 7px;
     cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.enviar:hover {
+    animation-duration: 1.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+//------------------------aviso orientador-------
+@media (max-width: 600px) {
+    .bgf {
+        height: 100%;
+        filter: blur(2px);
+        image-rendering: optimizeSpeed;
+        object-fit: cover;
+    }
 }

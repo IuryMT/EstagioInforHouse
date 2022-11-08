@@ -1,23 +1,35 @@
-// import './App.css';
 // import 'antd/dist/antd.min.css'
-import React from 'react';
+import React, { useState } from 'react';
 import './components/css/Header.scss';
 import { Routes, Route, Link } from 'react-router-dom';
-// import logo192 from "./img/logo192.png";
-import { Home } from './pages/Home/index.js';
-import { Login } from './pages/Login/index.js';
-import { Main } from './components/Main.js';
+import { Home } from './pages/Home/index';
+import { Login } from './components/Login';
+import { Main } from './components/Main';
+import { Input } from 'antd';
+import { Layout } from 'antd';
+const { Header } = Layout;
 
-// import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
+
+  const { Search } = Input;
+
+  const onSearch = (value) => console.log(value);
+
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <div className="App">
-      <header className='header'>
-        <div className='container'>
+      <Layout>
+        <Header>
           <nav className='nav'>
-            {/* <img className='img' src={logo192} alt="not found"/> */}
             <h1 className='logo'>Infor House</h1>
-            <ul className='navList'>
+            <Search placeholder="O que você está procurando?" size="small" onSearch={onSearch} enterButton  status="error"/>
+            <div className={`mobile-menu ${menuOpen === true && 'active'}` } onClick={() => setMenuOpen(!menuOpen)}>
+              <div className='line1'></div>
+              <div className='line2'></div>
+              <div className='line3'></div>
+            </div>
+            <ul className={`nav-list ${menuOpen === true && 'active'}`}>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -29,25 +41,15 @@ function App() {
               </li>
             </ul>
           </nav>
-        </div>
-      </header>
+        </Header>
+      </Layout>
+
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="vendas" element={<Main />} />
+        <Route path="*" element={<Home />} />
+        <Route path="/login/*" element={<Login />} />
+        <Route path="/vendas" element={<Main />} />
       </Routes>
-      {/* <Header />
-      <Section1 />
-      <Main />
-      <Login />
-
-      <Router>
-        <Routes>
-          <Route path='/Login' element={<Login />} />
-          <Route exact path="/" component={App}/>
-        </Routes>
-      </Router> */}
     </div>
   );
 };
