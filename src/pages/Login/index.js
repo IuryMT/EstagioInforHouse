@@ -1,6 +1,7 @@
 import '../../components/css/Login.scss';
 import { useState } from 'react';
 import React from 'react'
+import { InputFilter } from '.../components/evento/InputFilter.js'
 // import mer from '../../img/mer.jpg'
 
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
@@ -31,11 +32,14 @@ export const Login = () => {
                         <Header>Header</Header> */}
             <Layout>
                 <Content>
-                    <div className='conteudoLogin'>
-                        {/* <img src={mer} alt="bfuyv" className='bgf' /> */}
+                    <InputFilter>
+                    {/*<div className='conteudoLogin'>
+                         <img src={mer} alt="bfuyv" className='bgf' /> 
                         <form onSubmit={handleSubmit} className="Formulario">
 
-                            <Form
+                            
+
+                             <Form
                                 name="normal_login"
                                 className="login-form"
                                 initialValues={{
@@ -86,7 +90,7 @@ export const Login = () => {
                                     </Button>
                                     ou <a href="">Cadastrar!</a>
                                 </Form.Item>
-                            </Form>
+                            </Form> */}
 
 
                             {/* <h1>Login</h1>
@@ -114,9 +118,9 @@ export const Login = () => {
                             </div>
                             <div id='actions'>
                                 <button type='submit' className='enviar'>Enviar</button>
-                            </div> */}
+                            </div>
                         </form>
-                    </div>
+                    </div> */}
                 </Content>
 
             </Layout>

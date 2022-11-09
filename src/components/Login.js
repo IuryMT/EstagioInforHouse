@@ -11,6 +11,17 @@ const { Content } = Layout;
 
 export const Login = () => {
 
+    const [form] = Form.useForm();
+    // const [values, setValues] = useState({});
+ 
+    const onFinish = (values) => {
+        // console.log(values);
+    };
+
+    const onReset = () => {
+        form.resetFields();
+    };
+
     return (
         <>
             <Layout>
@@ -20,12 +31,16 @@ export const Login = () => {
                         <form method='post'>
                             <h1 className='titulo2'>Login</h1>
 
+
                             {/* <Form {...layout} form={form} name="control-hooks"> */}
                             <label className="label" htmlFor='user'>Usuário</label>
                             <InputMasc />
 
                             <br></br><br></br>
                             <label className="label" htmlFor='password'>Senha</label>
+
+                            <br></br>
+
                             <Space direction="vertical">
 
                                 <Input.Password
@@ -48,6 +63,31 @@ export const Login = () => {
 
                             {/* <input type="submit" value='Enviar' />  */}
                             <Button type="primary" htmlType="submit">Enviar</Button>
+
+                            {/* <Form.Item
+                                noStyle
+                                shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
+                            >
+                                {({ getFieldValue }) =>
+                                    getFieldValue('gender') === 'other' ? (
+                                        <Form.Item
+                                            name="customizeGender"
+                                            label="Customize Gender"
+                                            rules={[
+                                                {
+                                                    required: true,
+                                                },
+                                            ]}
+                                        >
+                                            <Input />
+                                        </Form.Item>
+                                    ) : null
+                                }
+                            </Form.Item> */}
+
+                            <a className="login-form-forgot" href="...">
+                                Esqueceu sua senha? Relaxa.
+                            </a>
 
 
                             {/* <div className='content'>
