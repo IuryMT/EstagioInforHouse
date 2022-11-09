@@ -3,11 +3,7 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import "./css/ImageUpload.scss";
 import { UploadOutlined } from '@ant-design/icons';
-import {
-    Form,
-    Button,
-    Upload,
-} from 'antd';
+import { Form, Button, Upload } from 'antd';
 
 const formItemLayout = {
     labelCol: {
@@ -19,7 +15,7 @@ const formItemLayout = {
 };
 
 const normFile = (e) => {
-    console.log(e);
+    console.log(e.file);
     if (Array.isArray(e)) {
         return e;
     }
@@ -30,20 +26,20 @@ const normFile = (e) => {
 export const ImageUpload = () => {
 
     const onFinish = (values) => {
-        console.log(values);
+        console.log(values, "32");
     };
 
     const [image, setImage] = useState();
     const [cropData, setCropData] = useState("#");
     const [cropper, setCropper] = useState();
     const onChange = (e) => {
-        e.preventDefault();
         let files;
         if (e.dataTransfer) {
             files = e.dataTransfer.files;
         } else if (e.target) {
             files = e.target.files;
         }
+
         const reader = new FileReader();
         reader.onload = () => {
             setImage(reader.result);
@@ -54,6 +50,7 @@ export const ImageUpload = () => {
     const getCropData = () => {
         if (typeof cropper !== "undefined") {
             setCropData(cropper.getCroppedCanvas().toDataURL());
+            console.log(image)
         }
     };
 
@@ -72,7 +69,7 @@ export const ImageUpload = () => {
                         getValueFromEvent={normFile}
                         onChange={onChange}
                     >
-                        <Upload name="logo" action="/upload.do" listType="picture">
+                        <Upload name="logo" action="#" listType="picture">
                             <Button icon={<UploadOutlined />} style={{ marginTop: '50%', marginRight: '50%', position: 'relative' }}>Click to upload</Button>
                         </Upload>
                     </Form.Item>
@@ -87,6 +84,8 @@ export const ImageUpload = () => {
                         src={image}
                         viewMode={1}
                         minCropBoxHeight={10}
+                        cropBoxWidth={100}
+                        cropBoxHeight={100}
                         minCropBoxWidth={10}
                         background={false}
                         responsive={true}
@@ -114,11 +113,11 @@ export const ImageUpload = () => {
                         style={{ width: "50%", float: "right", height: "200px" }}
                     >
                         <h1>
-                            <button style={{ float: "center", background: 'white', cursor: 'pointer', border: 0, marginBottom: 10 }} onClick={getCropData}>
+                            <button style={{ float: "center", background: 'white', cursor: 'pointer', border: 0, marginBottom: 10, padding: 5, borderRadius: 5 }} onClick={getCropData}>
                                 Recortar Imagem
                             </button>
                         </h1>
-                        <img style={{ width: "50%", borderRadius: 0, height: 200 }} src={cropData} alt="cropped" />
+                        <img style={{ width: "50%", borderRadius: 0, height: 200 }} src={cropData} alt="Selecione uma imagem" />
                     </div>
 
                 </div>
@@ -130,8 +129,6 @@ export const ImageUpload = () => {
                 </Form.Item>
 
             </Form>
-
-
         </>
     );
 };
