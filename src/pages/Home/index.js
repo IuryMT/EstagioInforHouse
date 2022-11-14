@@ -29,7 +29,7 @@ import SwiperCore, {
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
-const { Content, Footer, Header } = Layout;
+const { Content, Footer } = Layout;
 
 export const Home = () => {
 

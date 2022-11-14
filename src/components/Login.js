@@ -11,16 +11,16 @@ const { Content } = Layout;
 
 export const Login = () => {
 
-    const [form] = Form.useForm();
+    // const [form] = form.useForm();
     // const [values, setValues] = useState({});
  
-    const onFinish = (values) => {
+    // const onFinish = (values) => {
         // console.log(values);
-    };
+    // };
 
-    const onReset = () => {
-        form.resetFields();
-    };
+    // const onReset = () => {
+    //     form.resetFields();
+    // };
 
     return (
         <>
@@ -85,9 +85,9 @@ export const Login = () => {
                                 }
                             </Form.Item> */}
 
-                            <a className="login-form-forgot" href="...">
+                            {/* <a className="login-form-forgot" href="...">
                                 Esqueceu sua senha? Relaxa.
-                            </a>
+                            </a> */}
 
 
                             {/* <div className='content'>

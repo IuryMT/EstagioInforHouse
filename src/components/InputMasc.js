@@ -15,17 +15,17 @@ export function InputMasc(e) {
 
             // Elimina Cpfs inválidos conhecidos	
             
-            if (inputSize != 11 ||
-                inputValue == "00000000000" ||
-                inputValue == "11111111111" ||
-                inputValue == "22222222222" ||
-                inputValue == "33333333333" ||
-                inputValue == "44444444444" ||
-                inputValue == "55555555555" ||
-                inputValue == "66666666666" ||
-                inputValue == "77777777777" ||
-                inputValue == "88888888888" ||
-                inputValue == "99999999999") {
+            if (inputSize !== 11 ||
+                inputValue === "00000000000" ||
+                inputValue === "11111111111" ||
+                inputValue === "22222222222" ||
+                inputValue === "33333333333" ||
+                inputValue === "44444444444" ||
+                inputValue === "55555555555" ||
+                inputValue === "66666666666" ||
+                inputValue === "77777777777" ||
+                inputValue === "88888888888" ||
+                inputValue === "99999999999") {
 
                 return false;
             }
@@ -53,56 +53,11 @@ export function InputMasc(e) {
                 return true;
             }
 
-            // Elimina CPFs inválidos conhecidos	
-            if (cpf != 11 ||
-                caractere == "00000000000" ||
-                caractere == "11111111111" ||
-                caractere == "22222222222" ||
-                caractere == "33333333333" ||
-                caractere == "44444444444" ||
-                caractere == "55555555555" ||
-                caractere == "66666666666" ||
-                caractere == "77777777777" ||
-                caractere == "88888888888" ||
-                caractere == "99999999999") {
-                console.log('passou 04')
-                return false;
-            }
-            // Valida 1  digito, soma os números até a penultima casa, e verifica a condição com último caracter
-            let i = 0;
-            let add = 0;
-            for (i = 0; i < 9; i++)
-                add += parseInt(caractere.charAt(i)) * (10 - i);
-            let rev = 11 - (add % 11);
-            if (rev === 10 || rev === 11)
-                rev = 0;
-            if (rev != parseInt(caractere.charAt(9))) {
-                console.log('passou 06')
-
-                return false;
-            }
-            // Valida 2o digito, soma todos os números, verifica com penultimo caracter
-            add = 0;
-            for (i = 0; i < 10; i++)
-                add += parseInt(caractere.charAt(i)) * (11 - i);
-            rev = 11 - (add % 11);
-            if (rev === 10 || rev === 11)
-                rev = 0;
-            if (rev != parseInt(caractere.charAt(10))) {
-                console.log(rev, caractere.charAt(10))
-                console.log('passou 07')
-
-                return false;
-            }
-            else {
-                return true;
-            }
-
         }
 
-        const telefone_validation = (cpf) => {
+        const phone_validation = (cpf) => {
             //retira todos os caracteres menos os números
-            caractere = caractere.replace(/\D/g, '');
+            inputValue = inputValue.replace(/\D/g, '');
             // verifica se tem a quantidade de números correto
             if (!(cpf >= 10 && cpf <= 11)) return false;
 
