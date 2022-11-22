@@ -7,6 +7,7 @@
 .ant-row:after,
 .ant-row:before {
     align-items: center;
+    justify-content: center;
 }
 
 .ant-space {
@@ -69,7 +70,7 @@ input.false {
 
 .ant-form-item-control {
     width: 50vw !important;
-    flex-grow: 0 !important;
+    flex: 0 !important;
     color: #fff;
 }
 
@@ -103,6 +104,7 @@ input.false {
     display: flex !important;
     margin-top: 10px;
 }
+
 .titulo2{
     color: rgb(255, 255, 255);
     font-size: 36px;
@@ -115,23 +117,15 @@ input.false {
     border-radius: 7px;
     margin-right: 5px;
     margin-left: 5px;
-    
-
 }
 .ant-btn-primary {
     border-radius: 7px;
-    // margin-right: 5px!important;
-    // margin-top: 50px;
 }
 
 .ant-select-selector {
     border-radius: 10px !important;
 }
 
-
-.ant-row.ant-form-item-row {
-    align-items: center;
-}
 .ant-form-item-label>label {
     color: #fff;
     height: 0;

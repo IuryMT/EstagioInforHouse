@@ -15,7 +15,7 @@ const formItemLayout = {
 };
 
 const normFile = (e) => {
-    console.log(e.file);
+    // console.log(e.file);
     if (Array.isArray(e)) {
         return e;
     }
@@ -26,7 +26,7 @@ const normFile = (e) => {
 export const ImageUpload = () => {
 
     const onFinish = (values) => {
-        console.log(values, "32");
+        // console.log(values, "32");
     };
 
     const [image, setImage] = useState();
@@ -50,7 +50,7 @@ export const ImageUpload = () => {
     const getCropData = () => {
         if (typeof cropper !== "undefined") {
             setCropData(cropper.getCroppedCanvas().toDataURL());
-            console.log(image)
+            // console.log(image)
         }
     };
 
@@ -70,7 +70,7 @@ export const ImageUpload = () => {
                         onChange={onChange}
                     >
                         <Upload name="logo" action="#" listType="picture">
-                            <Button icon={<UploadOutlined />} style={{ marginTop: '50%', marginRight: '50%', position: 'relative' }}>Click to upload</Button>
+                            <Button icon={<UploadOutlined />} style={{ marginTop: '50%', transform: "translateX(-50%)", marginRight: '50%', position: 'relative' }}>Click to upload</Button>
                         </Upload>
                     </Form.Item>
 
@@ -98,32 +98,34 @@ export const ImageUpload = () => {
                     />
                 </div>
                 <div>
-                    <div
+                    {/* <div
                         className="box"
-                        style={{ width: "50%", float: 'left', height: 200 }}
+                        style={{ width: "50%", float: 'left', height: "200px" }}
                     >
-                        <h1 style={{ marginBottom: 10 }}>Pré visualização</h1>
+                        <h1 style={{ marginBottom: 10, position: 'relative' }}>Pré visualização</h1>
                         <div
                             className="img-preview"
-                            style={{ width: "50%", float: "center", height: "200px" }}
                         />
-                    </div>
+                    </div> */}
                     <div
                         className="box"
-                        style={{ width: "50%", float: "right", height: "200px" }}
+                        style={{ width: "50%", margin: 'auto', height: 200 }}
                     >
                         <h1>
-                            <button style={{ float: "center", background: 'white', cursor: 'pointer', border: 0, marginBottom: 10, padding: 5, borderRadius: 5 }} onClick={getCropData}>
+                            <button style={{ float: "center", background: 'white', cursor: 'pointer', border: 0, marginBottom: 10, padding: 5, borderRadius: 5, boxShadow: "2px 2px 10px black" }} onClick={getCropData}>
                                 Recortar Imagem
                             </button>
                         </h1>
-                        <img style={{ width: "50%", borderRadius: 0, height: 200 }} src={cropData} alt="Selecione uma imagem" />
+                        <img style={{ width: 200, borderRadius: 0, height: 200 }} src={cropData} alt="Selecione uma imagem" />
                     </div>
 
                 </div>
                 <br style={{ clear: "both" }} />
+                <br style={{ clear: "both" }} />
+                <br style={{ clear: "both" }} />
+                <br style={{ clear: "both" }} />
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" style={{ marginTop: 60, margin: 'auto' }}>
+                    <Button type="primary" htmlType="submit" style={{ marginTop: 60, margin: 'auto', transform: 'translateX(-50%)' }}>
                         Enviar
                     </Button>
                 </Form.Item>

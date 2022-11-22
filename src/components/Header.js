@@ -27,13 +27,13 @@ export function Heade() {
                     <div className='line3'></div>
                 </div>
                 <ul className={`nav-list ${menuOpen === true && 'active'}`}>
-                    <li>
-                        <Link to="/">Home</Link>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
+                        <Link to="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <Link to="/login">Login</Link>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <Link to="/vendas">Venda</Link>
                     </li>
                 </ul>

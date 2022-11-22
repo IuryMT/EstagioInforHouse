@@ -6,15 +6,27 @@
 }
 
 .img-preview {
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px !important;
+  height: 200px !important;
 }
 
+// .img-preview > img{
+//   width: 200px !important;
+//   height: 200px !important;
+//   transform: translateX(0) translateY(0) !important;
+// }
+
 img {
-  border-radius: 0 !important;
+  border-radius: 0;
 }
 
 .cropper-crop-box {
-  width: 500px !important;
+  width: 300px !important;
   height: 100% !important;
 }
 

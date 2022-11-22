@@ -5,11 +5,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import { Button } from 'antd';
 
-
-
 const { Sider, Content } = Layout;
-
-
 
 
 // forms
@@ -27,21 +23,37 @@ const { Sider, Content } = Layout;
 // import React from 'react';
 
 export const Main = () => {
-
-
-
-    const [codigo, setCodigo] = useState();
+    const [codigo, setCodigo] = useState('');
     const [codigos, setCodigos] = useState([]);
-    const [count, setCount] = useState(0);
-    // const [quantidade, setQuantidade] = useState();
-
-
+    // const [count, setCount] = useState(0);
+    const [quantidade, setQuantidade] = useState();
+    const Input = document.getElementById('quant');
+    const Form = document.getElementById('form');
 
     function salva(param) {
         setCodigo(param.target.value);
-        /*   setQuantidade(param.target.value);*/
+        // setCount(codigo.length)
+        // console.log(codigo.length)
+        // if (count === 12) {
+        //     saveNumbersProducts();
+        // }
     }
 
+    function saveNumbersProducts(e) {
+        setQuantidade(e.target.value)
+        Input.addEventListener('keypress', function (param) {
+            if (param.key === "Enter") {
+            param.preventDefault();
+
+            let temp_codigos = codigos
+            temp_codigos.push(codigo)
+
+            setCodigos(temp_codigos * quantidade)
+
+            Form.reset();
+        }
+        });
+    }
 
     function salva2(param) {
         param.preventDefault();
@@ -49,79 +61,29 @@ export const Main = () => {
         let temp_codigos = codigos
         temp_codigos.push(codigo)
 
-        setCodigos(temp_codigos)
-        console.log(codigos);
+        setCodigos(temp_codigos * quantidade)
 
-        document.getElementById("form").reset();
+        Form.reset();
         // Nunca apagar esse contador, senão buga o bip.
-        if (count < 100) {
-            setCount((c) => c + 1);
-
-        }
+        // if (count < 100) {
+        //     setCount((c) => c + 1);
+        // }
 
 
     }
     return (
         <>
-            {/* <main>
-
-                 <form onSubmit={salva2} className='form' id='form'>
-                    <h1 className='title'>T-T</h1>
-                    <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
-                    <div className='cards'>
-                        {codigos.map((codigo, index) => (
-                            <div className='card' key={index}>
-                                <div className='img'>
-                                    <img src={relogio} alt="not found" />
-                                </div>
-                                <div className='content'>
-                                    <h2 className='titulo'>{codigo}</h2>
-                                    <h4 className='descricao'>Descrição</h4>
-                                </div>
-                                <div className='valor'>
-                                    <h1 className='preco'>R$ 100</h1>
-                                    <h4 className='descricao'>á vista</h4>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </form>
-
-                <div className='direita'>
-                    <h2 className='esc'>Total de Compras</h2>
-                    <hr></hr> */}
-            {/* {codigos.map((codigo, index) => (
-                        <div className='borda' key={index}>
-                            <p className='p'>{codigo}</p>
-                        </div>
-                    ))} */}
-            {/* </div>
-                <div className='esquerda'>
-                    <a href='#' className='comprar'>Adicionar ao carrinho <ShoppingCartOutlined /></a>
-                </div>
-                <div className='esquerda2'>
-                    <a href='#' className='comprar'>Comprar agora</a>
-                </div> */}
-
-
-
-
-
-
-
-            {/* <Layout>
-                <Header>Header</Header> */}
             <Layout>
-                <Content>
+                <Content className='height100'>
                     <form onSubmit={salva2} className='form' id='form'>
                         <h1 className='title'>T-T</h1>
-                        <input maxLength={14} placeholder={"Código"} onChange={salva} id="codigo" type="text" />
-
+                        <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" className='codigo' type="text" />
+                        <input maxLength={3} placeholder={"Quantidade"} onChange={saveNumbersProducts} id="quant" className='codigo' type="text" />
                         <div className='cards'>
                             {codigos.map((codigo, index) => (
                                 <div className='card' key={index}>
                                     <div className='img'>
-                                        <img src={relogio} alt="not found" />
+                                        <img draggable={false} src={relogio} className='card-img' alt="not found" />
                                     </div>
                                     <div className='content'>
                                         <h2 className='titulo'>{codigo}</h2>
@@ -139,12 +101,17 @@ export const Main = () => {
                         </div>
                     </form>
                 </Content>
-                <Sider className='des1'>
+                <Sider>
                     <h2 className='esc'>Total de Compras</h2>
                     <hr></hr>
+                    <div className='des1'>
+                        {codigos.map((codigo, index) => (
+                            <div className='borda' key={index}>
+                                <p className='p'>{codigo}</p>
+                            </div>
+                        ))}
+                    </div>
 
-                </Sider>
-                <Sider className='des2'>
 
                     <div className="baixo">
                         <div className='esquerda'>
