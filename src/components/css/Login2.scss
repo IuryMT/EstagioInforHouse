@@ -1,6 +1,13 @@
+
+
 .ant-row .ant-form-item-row {
     bottom: 10px;
     
+}.goog{
+    margin: 10px;
+}
+span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .ant-row,
@@ -36,7 +43,7 @@ input.false {
 
 .formLogin {
     width: 35vw;
-    height: 60vh;
+    min-width: 260px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -45,10 +52,6 @@ input.false {
     padding: 10px;
     border-radius: 10px;
 }
-
-// .ant-layout-header{
-//     display: none;
-// }
 
 .label{
     color: rgb(255, 255, 255);
@@ -97,7 +100,6 @@ input.false {
     margin: auto !important;
 }
 
-///////////////////////////////////////////////////////Wario
 .ant-form-item-control-input-content {
     width: 100% !important;
     margin-right: 50% !important;
@@ -108,7 +110,7 @@ input.false {
 .titulo2{
     color: rgb(255, 255, 255);
     font-size: 36px;
-    padding: 30px;
+    padding: 25px;
     margin: 0;
     text-align: center;
 }

@@ -8,74 +8,50 @@ import { Button } from 'antd';
 const { Sider, Content } = Layout;
 
 
-// forms
-
-// import { Button, Form, Input } from 'antd';
-
-// Layout do grid ja feito antd
-
-// import { Layout } from 'antd';
-// const { Header, Footer, Sider, Content } = Layout;
-
-//  para alterar para o antd // sistema grid dele
-
-// import { Col, Row } from 'antd';
-// import React from 'react';
-
 export const Main = () => {
     const [codigo, setCodigo] = useState('');
     const [codigos, setCodigos] = useState([]);
-    // const [count, setCount] = useState(0);
-    const [quantidade, setQuantidade] = useState();
+    const [quantidade, setQuantidade] = useState(0);
     const Input = document.getElementById('quant');
     const Form = document.getElementById('form');
+    const [hasListening, setHasListenig] = useState(false)
+    localStorage.getItem("myValueInLocalStorage")
+
 
     function salva(param) {
-        setCodigo(param.target.value);
-        // setCount(codigo.length)
-        // console.log(codigo.length)
-        // if (count === 12) {
-        //     saveNumbersProducts();
-        // }
+        sessionStorage.setItem('myValueInLocalStorage', param.target.value);
+        setCodigo(param.target.value)
+        console.log(codigo)
+        if (codigo.length === 12) {
+            document.getElementById('quant').focus()
+        }
     }
 
-    function saveNumbersProducts(e) {
-        setQuantidade(e.target.value)
-        Input.addEventListener('keypress', function (param) {
-            if (param.key === "Enter") {
-            param.preventDefault();
-
-            let temp_codigos = codigos
-            temp_codigos.push(codigo)
-
-            setCodigos(temp_codigos * quantidade)
-
-            Form.reset();
-        }
+    function saveNumbersProducts(param) {
+        if (hasListening) return;
+        setHasListenig(true);
+        Input.addEventListener('keypress', function (e) {
+            setQuantidade(param.target.value);
+            if (e.which === 13) {
+                salva2();
+            }
         });
     }
 
-    function salva2(param) {
-        param.preventDefault();
-
+    function salva2() {
         let temp_codigos = codigos
-        temp_codigos.push(codigo)
-
-        setCodigos(temp_codigos * quantidade)
+        temp_codigos.push(sessionStorage.getItem("myValueInLocalStorage"));
+        setCodigos(temp_codigos)
 
         Form.reset();
-        // Nunca apagar esse contador, senão buga o bip.
-        // if (count < 100) {
-        //     setCount((c) => c + 1);
-        // }
-
+        document.getElementById('codigo').focus();
 
     }
     return (
         <>
             <Layout>
                 <Content className='height100'>
-                    <form onSubmit={salva2} className='form' id='form'>
+                    <form className='form' id='form' >
                         <h1 className='title'>T-T</h1>
                         <input maxLength={13} placeholder={"Código"} onChange={salva} id="codigo" className='codigo' type="text" />
                         <input maxLength={3} placeholder={"Quantidade"} onChange={saveNumbersProducts} id="quant" className='codigo' type="text" />
@@ -94,9 +70,7 @@ export const Main = () => {
                                         <h1 className='preco'>R$ 100</h1>
                                         <h4 className='descricao'>á vista</h4>
                                     </div>
-
                                 </div>
-
                             ))}
                         </div>
                     </form>
@@ -112,7 +86,6 @@ export const Main = () => {
                         ))}
                     </div>
 
-
                     <div className="baixo">
                         <div className='esquerda'>
                             <Button type="secundary" block>
@@ -123,20 +96,14 @@ export const Main = () => {
                         </div>
                         <div className='esquerda2'>
                             <Button type="secundary" block>
-                                <a className='comprar'>
+                                <a className='comprar' href=''>
                                     Comprar agora
                                 </a>
                             </Button>
                         </div>
                     </div>
                 </Sider>
-
             </Layout>
-            {/* <Footer>Footer</Footer> */}
-            {/* </Layout> */}
-            {/* </main> */}
-
-
         </>
     )
 }

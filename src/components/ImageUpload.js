@@ -15,7 +15,6 @@ const formItemLayout = {
 };
 
 const normFile = (e) => {
-    // console.log(e.file);
     if (Array.isArray(e)) {
         return e;
     }
@@ -24,10 +23,6 @@ const normFile = (e) => {
 
 
 export const ImageUpload = () => {
-
-    const onFinish = (values) => {
-        // console.log(values, "32");
-    };
 
     const [image, setImage] = useState();
     const [cropData, setCropData] = useState("#");
@@ -50,7 +45,6 @@ export const ImageUpload = () => {
     const getCropData = () => {
         if (typeof cropper !== "undefined") {
             setCropData(cropper.getCroppedCanvas().toDataURL());
-            // console.log(image)
         }
     };
 
@@ -59,7 +53,6 @@ export const ImageUpload = () => {
             <Form
                 name="validate_other"
                 {...formItemLayout}
-                onFinish={onFinish}
                 style={{ background: 'gray' }}
             >
                 <div style={{ width: "100%", padding: 10, height: 'auto' }}>
@@ -90,7 +83,7 @@ export const ImageUpload = () => {
                         background={false}
                         responsive={true}
                         autoCropArea={1}
-                        checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
+                        checkOrientation={false}
                         onInitialized={(instance) => {
                             setCropper(instance);
                         }}
@@ -98,15 +91,6 @@ export const ImageUpload = () => {
                     />
                 </div>
                 <div>
-                    {/* <div
-                        className="box"
-                        style={{ width: "50%", float: 'left', height: "200px" }}
-                    >
-                        <h1 style={{ marginBottom: 10, position: 'relative' }}>Pré visualização</h1>
-                        <div
-                            className="img-preview"
-                        />
-                    </div> */}
                     <div
                         className="box"
                         style={{ width: "50%", margin: 'auto', height: 200 }}

@@ -55,11 +55,11 @@ export function InputMasc(e) {
 
         }
 
-        const phone_validation = (cpf) => {
+        const phone_validation = (inputSize) => {
             //retira todos os caracteres menos os números
             inputValue = inputValue.replace(/\D/g, '');
             // verifica se tem a quantidade de números correto
-            if (!(cpf >= 10 && cpf <= 11)) return false;
+            if (!(inputSize >= 10 && inputSize <= 11)) return false;
 
             // Se tiver 11 caracteres, verificar se começa com 9 o celular
             if (inputSize === 11 && parseInt(inputValue

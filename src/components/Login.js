@@ -2,25 +2,40 @@ import './css/Login2.scss';
 import { Input, Space, Button } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { InputMasc } from './InputMasc';
-import { Routes, Route, Link } from 'react-router-dom';
-import { Main } from './Main';
-import React from 'react';
+import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { gapi } from 'gapi-script';
 
 const { Content } = Layout;
 
 export const Login = () => {
+    const [profile, setProfile] = useState([]);
+    const clientId = "147895307974-d4osge5cr8c0a1mp1fi2kq4bbqhm6pej.apps.googleusercontent.com";
 
-    // const [form] = form.useForm();
-    // const [values, setValues] = useState({});
- 
-    // const onFinish = (values) => {
-        // console.log(values);
-    // };
+    useEffect(() => {
+        const initClient = () => {
+            gapi.client.init({
+                clientId: clientId,
+                scope: 'email profile',
+            });
+        };
+        gapi.load('client:auth2', initClient);
+    });
 
-    // const onReset = () => {
-    //     form.resetFields();
-    // };
+    const responseGoogleSuccess = (res) => {
+        console.log(res)
+        setProfile(res.profileObj);
+    };
+
+    const responseGoogleFailure = (err) => {
+        console.log('Error', err);
+    };
+
+    const logOut = () => {
+        setProfile(null);
+    };
 
     return (
         <>
@@ -31,8 +46,6 @@ export const Login = () => {
                         <form method='post'>
                             <h1 className='titulo2'>Login</h1>
 
-
-                            {/* <Form {...layout} form={form} name="control-hooks"> */}
                             <label className="label" htmlFor='user'>Usuário</label>
                             <InputMasc />
 
@@ -56,79 +69,40 @@ export const Login = () => {
                             </Space>
                             <br></br>
                             <Link className="login-form-forgot" to="/cadastro">Esqueceu sua senha? Relaxa.</Link>
-                            {/* <a className="login-form-forgot" href="">
-                                
-                            </a> */}
                             <br></br><br></br><br></br>
-
-                            {/* <input type="submit" value='Enviar' />  */}
                             <Button type="primary" htmlType="submit">Enviar</Button>
+                            {profile ? (
+                                <div className="goog">
+                                    <GoogleLogin
+                                        clientId={clientId}
+                                        redirectUri='http://localhost:3000'
+                                        onSuccess={responseGoogleSuccess}
+                                        onFailure={responseGoogleFailure}
+                                        cookiePolicy={'single_host_origin'}
+                                        isSignedIn={false}
 
-                            {/* <Form.Item
-                                noStyle
-                                shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
-                            >
-                                {({ getFieldValue }) =>
-                                    getFieldValue('gender') === 'other' ? (
-                                        <Form.Item
-                                            name="customizeGender"
-                                            label="Customize Gender"
-                                            rules={[
-                                                {
-                                                    required: true,
-                                                },
-                                            ]}
-                                        >
-                                            <Input />
-                                        </Form.Item>
-                                    ) : null
-                                }
-                            </Form.Item> */}
-
-                            {/* <a className="login-form-forgot" href="...">
-                                Esqueceu sua senha? Relaxa.
-                            </a> */}
-
-
-                            {/* <div className='content'>
-                <form onSubmit={handleSubmit} className="Formulario">
-                    <h1>Login</h1>
-                    <div id="field">
-                        <label htmlFor='email'>Email </label>
-                        <input
-                            className='input'
-                            type='email'
-                            name='email'
-                            id='email'
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </div>
-                    <div id="field">
-                        <label htmlFor='password'>Senha  </label>
-                        <input
-                            className='input'
-                            type='password'
-                            name='password'
-                            id='password'
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </div>
-                    <div id='actions'>
-                        <button type='submit'>Enviar</button>
-                    </div>
-                </form>
-            </div> */}
+                                    />
+                                </div>
+                            ) : (
+                                <div className="userInfor">
+                                    <img src={profile.imageUrl} />
+                                    <h3>User Logged in</h3>
+                                    <p>Name: {profile.name}</p>
+                                    <p>Email Address: {profile.email}</p>
+                                    <br />
+                                    <br />
+                                    <GoogleLogout
+                                        clientId={clientId}
+                                        onLogoutSuccess={logOut}
+                                    />
+                                </div>
+                            )}
                         </form>
                     </div>
 
                 </Content>
             </Layout>
 
-            <Routes>
-                <Route path="/cadastro" element={<Main />} />
-            </Routes>
         </>
     )
 }
