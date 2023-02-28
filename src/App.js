@@ -15,7 +15,7 @@ function App() {
 
   const onSearch = (value) => console.log(value);
 
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="App">
