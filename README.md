@@ -19,7 +19,7 @@ I worked the role of Front-end developer along with another dev and created this
 - Swiper 
 - Vite 
 
-# Hosted Site [Infor House Internship] () 
+# Hosted Site [Infor House Internship] (https://main--jade-wisp-817a7e.netlify.app/) 
 
 ### Run project 
 
