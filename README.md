@@ -1,4 +1,4 @@
-# Stage Infor House. 
+# Internship Infor House. 
 
 This project was developed during a 300-hour internship as a computer technician at [Infor House](http://inforhousecariri.com.br/). 
 
@@ -19,7 +19,7 @@ I worked the role of Front-end developer along with another dev and created this
 - Swiper 
 - Vite 
 
-# Hosted Site [Infor House Internship] (https://main--jade-wisp-817a7e.netlify.app/) 
+# Hosted Site [Infor House Internship](https://main--jade-wisp-817a7e.netlify.app/) 
 
 ### Run project 
 
