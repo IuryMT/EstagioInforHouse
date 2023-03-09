@@ -1,10 +1,9 @@
 import './css/Login2.scss';
-import { Input, Space, Button } from 'antd';
+import { Input, Space, Button, Layout } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { InputMasc } from './InputMasc';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import { Layout } from 'antd';
+import React, { useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 
 const { Content } = Layout;

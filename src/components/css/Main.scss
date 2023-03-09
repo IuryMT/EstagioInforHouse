@@ -53,21 +53,21 @@ h1.title::selection {
 }
 
 .cards {
-    margin-top: 100px;
+    margin-top: 185px;
     margin-right: 10px;
     background-color: transparent;
     width: 100%;
-    height: 70%;
+    height: 50%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 10px;
     overflow-y: scroll;
 }
 
 .card {
     width: 100%;
-    height: 170px;
-    min-height: 170px;
+    height: 150px;
+    min-height: 150px;
     position: relative;
     bottom: 0;
     display: flex;

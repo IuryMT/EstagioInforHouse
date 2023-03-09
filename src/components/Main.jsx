@@ -2,8 +2,7 @@ import './css/Main.scss'
 import React, { useState } from 'react';
 import relogio from "../img/relogio.png";
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import { Layout } from 'antd';
-import { Button } from 'antd';
+import { Layout, Button } from 'antd';
 
 const { Sider, Content } = Layout;
 

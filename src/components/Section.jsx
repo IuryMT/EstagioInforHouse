@@ -4,10 +4,8 @@ import relogio from "../img/relogio.png";
 import som from "../img/som.png";
 import mulher from "../img/mulher.png";
 import { Carousel } from 'antd';
-// import 'antd/dist/antd.css';
-import 'antd/dist/antd.min.css'
 
-export function Section1() {
+export function Section() {
     return(
         <>
         <Carousel type="primary" autoplay>

@@ -3,12 +3,12 @@ import { useState } from 'react'
 function Form(){
 
     function cadastrarUsuario(e){
-e.preventDefault()
-console.log(name, Email)
+        e.preventDefault()
+        console.log(name, Email)
     }
 
-    const [name, setName] = useState() // Vai ser usado para trabalhar com backend
-    const [Email, setEmail] = useState() // **
+    const [name, setName] = useState() 
+    const [Email, setEmail] = useState() 
     return(
         <div>
             <h1>Insira seus dados</h1>

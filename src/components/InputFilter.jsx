@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Form, Input, Select } from 'antd';
-import { Layout } from 'antd';
+import { Button, Form, Input, Select, Layout } from 'antd';
+import "./css/Login2.scss"
 const { Option } = Select;
 const layout = {
     labelCol: {
@@ -21,10 +21,6 @@ const { Content } = Layout;
 
 export function InputFilter() {
 
-    const [cpfOn, setCpfOn] = useState(false)
-    const [cnpjOn, setCnpjOn] = useState(false)
-    const [telefoneOn, setTelefoneOn] = useState(false)
-    const [emailOn, setEmailOn] = useState(false)
     const [tipo, setTipo] = useState("text")
     const [cpf, setCpf] = useState('');
     const [cnpj, setCnpj] = useState('');
@@ -32,62 +28,43 @@ export function InputFilter() {
     const [email, setEmail] = useState('');
     const [form] = Form.useForm();
 
+    
     const onGenderChange = (value) => {
+    let aemail = document.querySelector("#email");
+    const acnpj = document.querySelector("#cnpj");
+    const acpf = document.querySelector("#cpf");
+    const atel = document.querySelector("#tel");
         switch (value) {
             case 'Email':
                 setTipo("email")
-                setEmailOn(!emailOn)
-                if (cpfOn === true) {
-                    setCpfOn(false)
-                } else if (cnpjOn === true) {
-                    setCnpjOn(false)
-                }
-                else {
-                    setTelefoneOn(false)
-                }
+                aemail.classList.replace("false", "active");
+                acpf.classList.replace("active", "false");
+                acnpj.classList.replace("active", "false");
+                atel.classList.replace("active", "false");
                 return;
 
             case 'CNPJ':
                 setTipo("text")
-                setCnpjOn(!cnpjOn)
-                if (cpfOn === true) {
-                    setCpfOn(false)
-                }
-                else if (emailOn === true) {
-                    setEmailOn(false)
-                }
-                else {
-                    setTelefoneOn(false)
-                }
+                aemail.classList.replace("active", "false");
+                acpf.classList.replace("active", "false");
+                acnpj.classList.replace("false", "active");
+                atel.classList.replace("active", "false");
                 return;
 
             case 'Telefone':
                 setTipo("text")
-                setTelefoneOn(!telefoneOn)
-                if (cnpjOn === true) {
-                    setCnpjOn(false)
-                }
-                else if (emailOn === true) {
-                    setEmailOn(false)
-                }
-                else {
-                    setCpfOn(false)
-                }
+                aemail.classList.replace("active", "false");
+                acpf.classList.replace("active", "false");
+                acnpj.classList.replace("active", "false");
+                atel.classList.replace("false", "active");
                 return;
 
             case 'CPF':
                 setTipo("text")
-                setCpfOn(!cpfOn)
-                if (cnpjOn === true) {
-                    setCnpjOn(false)
-                }
-                else if (emailOn === true) {
-                    setEmailOn(false)
-                }
-                else {
-                    setTelefoneOn(false)
-                }
-
+                aemail.classList.replace("active", "false");
+                acpf.classList.replace("false", "active");
+                acnpj.classList.replace("active", "false");
+                atel.classList.replace("active", "false");
                 return;
 
             default:
@@ -169,7 +146,6 @@ export function InputFilter() {
 
                 <Form.Item
                     name="gender"
-                    label="Tipo de Dado"
                     rules={[
                         {
                             required: true,
@@ -189,21 +165,22 @@ export function InputFilter() {
                 </Form.Item>
 
                 <Input type={tipo} value={cpf} onKeyUp={handleKeyUpCpf} placeholder="999-999-999-99"
-                    onChange={(event) => setCpf(event.target.value)} className={`input ${cpfOn === true && 'active'}`} />
+                    onChange={(event) => setCpf(event.target.value)} className={'input false'} id="cpf"
+                />
 
                 <Input type={tipo} value={cnpj} onKeyUp={handleKeyUpCnpj} placeholder="99-999-999/9999-99"
-                    onChange={(event) => setCnpj(event.target.value)} className={`input ${cnpjOn === true && 'active'}`} />
+                    onChange={(event) => setCnpj(event.target.value)} className={'input false'} id="cnpj"
+                />
 
                 <Input type={tipo} value={tel} onKeyUp={handleKeyUpTel} placeholder="(99) 99999-9999"
-                    onChange={(event) => setTel(event.target.value)} className={`input ${telefoneOn === true && 'active'}`} />
+                    onChange={(event) => setTel(event.target.value)} className={'input false'} id="tel" 
+                />
 
                 <Input type={tipo} value={email} placeholder="example@gmail.com"
-                    onChange={(event) => setEmail(event.target.value)} className={`input ${emailOn === true && 'active'}`} />
+                    onChange={(event) => setEmail(event.target.value)} className={'input false'} id="email"
+                />
 
 
-                <a className="login-form-forgot" href="">
-                    Esqueceu sua senha? Relaxa.
-                </a>
 
                 <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
